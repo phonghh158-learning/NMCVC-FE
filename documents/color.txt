@@ -1,0 +1,30 @@
+1. Màu chủ đạo (Primary Color)
+Số lượng: 1 màu (đôi khi có thêm 1 biến thể đậm/nhạt của nó).
+Vai trò: Đây là màu thương hiệu. Dùng cho các thành phần chính như: Header, nút bấm quan trọng (CTA), icon chính, liên kết (link).
+
+2. Màu phụ / Màu nhấn (Secondary / Accent Color)
+Số lượng: 1 - 2 màu.
+Vai trò: Dùng để làm nổi bật những chi tiết nhỏ, tạo điểm nhấn hoặc dùng cho các hành động phụ để tránh nhàm chán khi nhìn mãi màu chủ đạo. Nó phải tương phản hoặc bổ trợ tốt cho màu chủ đạo.
+
+3. Màu trung tính (Neutrals)
+Số lượng: 3 - 5 màu (Trắng, Đen, và các sắc độ Xám).
+Vai trò: Chiếm diện tích lớn nhất (khoảng 60% giao diện).
+
+Nền (Background): Trắng hoặc xám rất nhạt.
+Văn bản (Text): Đen (hoặc xám đậm #333 để đỡ mỏi mắt hơn đen tuyền #000).
+Đường viền (Border): Xám nhạt để phân chia khu vực.
+
+4. Màu chức năng (Semantic / Status Colors)
+Số lượng: 4 màu cố định (theo quy ước chung của người dùng).
+Vai trò: Chỉ dùng để thông báo trạng thái, không dùng để trang trí.
+
+Xanh lá (Success): Thành công.
+Đỏ (Error/Danger): Lỗi, xóa, nguy hiểm.
+Vàng (Warning): Cảnh báo.
+Xanh dương (Info): Thông tin.
+
+Quy tắc phối màu "60-30-10"
+Để website hài hòa, cậu nên phân bổ diện tích màu theo tỉ lệ:
+60%: Màu trung tính (Nền, khoảng trắng).
+30%: Màu chủ đạo (Header, footer, khối nội dung chính).
+10%: Màu phụ/nhấn (Nút bấm, điểm nhấn đặc biệt).

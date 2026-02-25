@@ -1,0 +1,19 @@
+:root {
+    /* Palette */
+    --color-background: #fcf8f8; /* Nền chính */
+    --color-surface: #fbefef; /* Nền phụ, Card */
+    --color-secondary: #f9dfdf; /* Viền, trang trí */
+    --color-primary: #f5afaf; /* Điểm nhấn, nút bấm */
+
+    /* Text */
+    --color-text: #2d2424; /* Chữ chính (Nâu đen đậm) */
+    --color-text-inverse: #fefbfb; /* Chữ sáng màu kem */
+    --color-text-secondary: #6b5b5b; /* Chữ phụ (Nâu xám) */
+
+    /* Status */
+    --color-success: #10b981; /* Thành công */
+    --color-error: #e11d48; /* Lỗi */
+    --color-warning: #f59e0b; /* Cảnh báo */
+    --color-info: #3b82f6; /* Thông tin */
+}
+
