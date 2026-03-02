@@ -10,7 +10,7 @@
     </head>
     <body>
         <!-- Navigation Bar -->
-        <nav class="collapsed" id="side-bar">
+        <nav class="collapsed authenticated" id="side-bar">
             <ul class="logo">
                 <a href="#" class="logo-link">
                     <img class="image" src="images/logo/nmcvc.png" alt="logo" />
@@ -42,7 +42,7 @@
             </ul>
 
             <ul class="login">
-                <a href="#" class="login-link" id="login-button">
+                <a href="/pages/authentication.html" class="login-link" id="login-button">
                     <span class="material-symbols-rounded"> assignment_ind </span>
                     <span class="text">Login/Register &ThinSpace;</span>
                 </a>
@@ -73,6 +73,7 @@
             </div>
         </nav>
 
+        <!-- Website Settings -->
         <div class="website-settings" id="website-settings">
             <div class="setting theme" id="theme">
                 <div class="setting-icon" id="theme-icon">
@@ -112,14 +113,54 @@
         </div>
 
         <div class="wrapper">
-            <main>
-                <div class="card">
-                    <h1>Homepage</h1>
+            <header>
+                <span class="website-name">Nhà, mây, cá và cây</span>
+                <div class="top-nav">
+                    <ul class="menu">
+                        <a href="#home" class="menu-link">
+                            <span class="text">Home</span>
+                        </a>
+                        <a href="#about" class="menu-link">
+                            <span class="text">About</span>
+                        </a>
+                        <a href="#collections" class="menu-link">
+                            <span class="text">Collections</span>
+                        </a>
+                        <a href="#topics" class="menu-link">
+                            <span class="text">Topics</span>
+                        </a>
+                    </ul>
                 </div>
+            </header>
+
+            <main>
+                <section class="homepage-section" id="home"></section>
+                <section class="about-section" id="about"></section>
+                <section class="collections-section" id="collections"></section>
+                <section class="topics-section" id="topics"></section>
+                <section class="gallery-section" id="gallery"></section>
             </main>
 
             <footer>
-                <p>Copyright &copy; @Year nmcvc</p>
+                <p class="copyright">
+                    ©2026 Nhà, mây, cá và cây. All rights reserved.
+                    <br />
+                    Blog được chăm chút bởi
+                    <a href="#" class="owner-name">Thảo Trang</a> với tất cả tình yêu.
+                    <br />
+                    Website được phát triển bởi <a href="#" class="dev-name">phonghh158</a>.
+                </p>
+                <div class="owner-social-link">
+                    <a href="#" class="social-link" id="owner-facebook">
+                        <img src="/images/pic/social/facebook.png" alt="" />
+                    </a>
+                    <a href="#" class="social-link" id="owner-instagram">
+                        <img src="/images/pic/social/instagram.png" alt="" />
+                    </a>
+                    <a href="#" class="social-link" id="owner-spotify">
+                        <img src="/images/pic/social/spotify.png" alt="" />
+                    </a>
+                </div>
             </footer>
         </div>
 

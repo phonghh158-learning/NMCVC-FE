@@ -1,19 +1,72 @@
 :root {
-    /* Palette */
-    --color-background: #fcf8f8; /* Nền chính */
-    --color-surface: #fbefef; /* Nền phụ, Card */
-    --color-secondary: #f9dfdf; /* Viền, trang trí */
-    --color-primary: #f5afaf; /* Điểm nhấn, nút bấm */
+    /* Palette Light */
+    --color-background: #f9f5f6; /* Nền chính - hồng rất nhạt */
+    --color-surface: #f8e8ee; /* Card / navbar */
+    --color-secondary: #fdcedf; /* Viền / hover nhẹ */
+    --color-primary: #f2bed1; /* Nút / điểm nhấn */
 
     /* Text */
-    --color-text: #2d2424; /* Chữ chính (Nâu đen đậm) */
-    --color-text-inverse: #fefbfb; /* Chữ sáng màu kem */
-    --color-text-secondary: #6b5b5b; /* Chữ phụ (Nâu xám) */
+    --color-text: #3a2e33; /* Chữ chính - tím nâu đậm */
+    --color-text-inverse: #ffffff; /* Chữ trên nền primary */
+    --color-text-secondary: #7c6a72; /* Chữ phụ */
 
     /* Status */
     --color-success: #10b981; /* Thành công */
     --color-error: #e11d48; /* Lỗi */
     --color-warning: #f59e0b; /* Cảnh báo */
     --color-info: #3b82f6; /* Thông tin */
+
+    /* Font */
+    --font-text: "Google Sans Flex", sans-serif;
+    --font-title: "Niramit", sans-serif;
+    --font-code: "Google Sans Code", monospace;
+    --font-special: "Cherry Bomb One", system-ui;
+
+    /* Material Symbols */
+    --icon-fill: 0;
+    --icon-wght: 300;
+    --icon-grad: 0;
+    --icon-opsz: 24;
 }
 
+.top-nav {
+    display: flex;
+    width: max-content;
+    height: max-content;
+    align-items: center;
+    transition: all 0.33s ease;
+    cursor: pointer;
+}
+
+.top-nav .menu {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+    margin-top: 4px;
+    gap: 32px;
+    align-items: center;
+}
+
+.top-nav .menu a {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+    transition: all 0.33s ease;
+}
+
+.top-nav .menu a span {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+    font-size: 20px;
+    align-items: center;
+    transition: all 0.33s ease;
+}
+
+.top-nav .menu a:hover span {
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
