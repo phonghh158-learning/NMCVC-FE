@@ -70,3 +70,229 @@
     font-weight: 600;
     color: var(--color-text-secondary);
 }
+
+/* Homepage's Sections */
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 72px 0;
+    transition: all 0.33s ease;
+    z-index: 100;
+}
+
+/* Home */
+.home-section {
+    width: 100%;
+    height: calc(100vh - 72px - 72px);
+    min-height: 720px;
+    margin-bottom: 72px;
+    padding: 0;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-section .home-banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    z-index: 101;
+}
+
+.home-banner img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: bottom;
+    transition: all 0.33s ease;
+}
+
+.home-banner::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background-color: rgb(from var(--color-text-inverse) r g b / 0.33);
+    transition: all 0.33s ease;
+}
+body.dark .home-banner::after {
+    background-color: rgb(from var(--color-text-inverse) r g b / 0.5);
+}
+
+.home-section .home-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.33s ease;
+    z-index: 102;
+}
+
+.home-content .home-title {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    font-family: var(--font-title);
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--color-text);
+    text-shadow: 0 2px 4px rgb(from var(--color-text-inverse) r g b / 0.66);
+    transition: all 0.33s ease;
+    cursor: default;
+}
+
+.homepage-button {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+    padding: 10px 26px;
+    border-radius: 999px;
+    border-color: transparent;
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.33s ease;
+    z-index: 103;
+}
+
+.homepage-button:hover {
+    background-color: rgb(from var(--color-text-inverse) r g b / 0.66);
+    border: 1px solid var(--color-primary);
+    transform: translateY(-4px);
+}
+
+/* About */
+.about-section {
+    flex-direction: row;
+    width: 100%;
+    height: 480px;
+    padding: 72px 0;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.33s ease;
+    z-index: 100;
+}
+
+.about-section .about-blog {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 32px;
+    gap: 36px;
+    border-radius: 16px;
+    background-color: var(--color-surface);
+    align-items: center;
+    transition: all 0.33s ease;
+    z-index: 101;
+}
+
+.about-blog .about-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 460px);
+    height: max-content;
+    gap: 16px;
+    transition: all 0.33s ease;
+    cursor: default;
+    z-index: 101;
+}
+
+.about-content .about-title {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    font-family: var(--font-title);
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--color-text);
+    transition: all 0.33s ease;
+}
+
+.about-content .about-description {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    font-family: var(--font-text);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: justify;
+    color: var(--color-text);
+    transition: all 0.33s ease;
+}
+
+.about-blog .about-blog-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.33s ease;
+    z-index: 101;
+}
+
+.about-section .about-me {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: 100%;
+    gap: 16px;
+    transition: all 0.33s ease;
+    cursor: default;
+    z-index: 101;
+}
+
+.about-me .about-me-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.33s ease;
+    z-index: 101;
+}
+
+.about-blog .homepage-button {
+    margin: 2px 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
+    font-size: 18px;
+}
+
+.about-blog .homepage-button:hover {
+    background-color: rgb(from var(--color-text-inverse) r g b / 0.66);
+    border: 1px solid var(--color-primary);
+    transform: translateY(-2px);
+}
