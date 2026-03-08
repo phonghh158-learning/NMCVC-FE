@@ -94,6 +94,24 @@ img {
     object-position: center;
 }
 
+.device-screen-dimension {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    width: max-content;
+    height: max-content;
+    padding: 4px 8px;
+    border-radius: 2px 0 0 0;
+    background-color: rgb(from var(--color-surface) r g b / 0.33);
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.33s ease;
+    z-index: 1000;
+    cursor: default;
+}
+
 /* Navigation Bar */
 nav {
     position: fixed;
@@ -761,19 +779,22 @@ body.dark .theme-toggle .toggle-circle #toggle-circle-light {
     position: relative;
     display: flex;
     flex-direction: column;
-    left: 72px;
+    /* left: 72px; */
     width: calc(100% - 144px - 72px);
     min-width: 720px;
     height: 100%;
-    padding: 0 16px;
-    margin: 0 36px;
+    padding: 0 36px;
+    margin: 0 108px;
     gap: 16px;
     align-items: center;
+    align-self: center;
     scroll-behavior: smooth;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: var(--color-primary) transparent;
+    transition: all 0.33s ease;
+    /* border: 1px solid; */
 }
 
 /* Scrollbar width */
@@ -811,15 +832,16 @@ main {
 
 /* Header */
 header {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: row;
     flex-shrink: 0;
-    width: 100%;
+    width: calc(100% - 72px);
     height: 72px;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    z-index: 800;
 }
 
 .website-name {
@@ -834,6 +856,19 @@ header {
         0.66px -0.66px 0 var(--color-text),
         -0.66px 0.66px 0 var(--color-text),
         0.66px 0.66px 0 var(--color-text);
+    align-items: center;
+    cursor: default;
+}
+
+.website-page-name {
+    position: relative;
+    position: relative;
+    display: flex;
+    height: 100%;
+    font-family: var(--font-title);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-primary);
     align-items: center;
     cursor: default;
 }
@@ -943,4 +978,13 @@ footer .copyright a:hover::after {
     transform: translateY(-4px);
     filter: grayscale(0%);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.11);
+}
+
+/* Media Query */
+/* Tablet, Small Desktop */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+}
+
+/* Phone */
+@media (max-width: 767.98px) {
 }

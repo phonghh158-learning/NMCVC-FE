@@ -74,3 +74,17 @@ personalButton.addEventListener("click", () => {
     const personal = document.querySelector(".personal");
     personal.classList.toggle("active");
 });
+
+// Device Screen Dimension
+const screenDisplay = document.getElementById("device-screen-dimension");
+
+function updateDimensions() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    screenDisplay.textContent = `${width}px x ${height}px`;
+}
+
+updateDimensions();
+
+window.addEventListener("resize", updateDimensions);

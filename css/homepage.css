@@ -29,26 +29,32 @@
     --icon-opsz: 24;
 }
 
-.top-nav {
+.homepage-nav {
+    position: fixed;
+    bottom: 48px;
     display: flex;
     width: max-content;
     height: max-content;
+    padding: 16px 32px;
+    border-radius: 999px;
+    background-color: var(--color-surface);
     align-items: center;
+    justify-content: center;
     transition: all 0.33s ease;
     cursor: pointer;
+    z-index: 801;
 }
 
-.top-nav .menu {
+.homepage-nav .menu {
     display: flex;
     flex-direction: row;
     width: max-content;
     height: max-content;
-    margin-top: 4px;
-    gap: 32px;
+    gap: 24px;
     align-items: center;
 }
 
-.top-nav .menu a {
+.homepage-nav .menu a {
     display: flex;
     flex-direction: row;
     width: max-content;
@@ -56,17 +62,17 @@
     transition: all 0.33s ease;
 }
 
-.top-nav .menu a span {
+.homepage-nav .menu a span {
     display: flex;
     flex-direction: row;
     width: max-content;
     height: max-content;
-    font-size: 20px;
+    font-size: 18px;
     align-items: center;
     transition: all 0.33s ease;
 }
 
-.top-nav .menu a:hover span {
+.homepage-nav .menu a:hover span {
     font-weight: 600;
     color: var(--color-text-secondary);
 }
@@ -86,10 +92,7 @@ section {
 /* Home */
 .home-section {
     width: 100%;
-    height: calc(100vh - 72px - 72px);
-    min-height: 720px;
-    margin-bottom: 72px;
-    padding: 0;
+    height: calc(100vh - 72px);
     gap: 32px;
     align-items: center;
     justify-content: center;
@@ -97,10 +100,10 @@ section {
 
 .home-section .home-banner {
     position: absolute;
-    bottom: 0;
+    top: 90px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 90px);
     border-radius: 16px;
     z-index: 101;
 }
@@ -136,6 +139,7 @@ body.dark .home-banner::after {
     flex-direction: column;
     width: max-content;
     height: max-content;
+    margin: 72px 0 0;
     gap: 32px;
     align-items: center;
     justify-content: center;
@@ -260,7 +264,7 @@ body.dark .home-banner::after {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: max-content;
+    width: 480px;
     height: 100%;
     gap: 16px;
     transition: all 0.33s ease;
@@ -295,4 +299,19 @@ body.dark .home-banner::after {
     background-color: rgb(from var(--color-text-inverse) r g b / 0.66);
     border: 1px solid var(--color-primary);
     transform: translateY(-2px);
+}
+
+/* Media Query */
+/* Tablet, Small Desktop */
+@media (min-width: 768px) and (max-width: 1399.98px) {
+    .about-section {
+        gap: 0;
+    }
+    .about-section .about-me {
+        width: 0px;
+    }
+}
+
+/* Phone */
+@media (max-width: 767.98px) {
 }

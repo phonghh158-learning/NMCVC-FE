@@ -115,23 +115,29 @@
         <div class="wrapper">
             <header>
                 <span class="website-name">Nhà, mây, cá và cây</span>
-                <div class="top-nav">
-                    <ul class="menu">
-                        <a href="#home" class="menu-link">
-                            <span class="text">Home</span>
-                        </a>
-                        <a href="#about" class="menu-link">
-                            <span class="text">About</span>
-                        </a>
-                        <a href="#collections" class="menu-link">
-                            <span class="text">Collections</span>
-                        </a>
-                        <a href="#topics" class="menu-link">
-                            <span class="text">Topics</span>
-                        </a>
-                    </ul>
-                </div>
+                <span class="website-page-name">Trang chủ</span>
             </header>
+
+            <div class="homepage-nav">
+                <ul class="menu">
+                    <a href="#home" class="menu-link">
+                        <span class="material-symbols-rounded"> home </span>
+                        <span class="text">Home</span>
+                    </a>
+                    <a href="#about" class="menu-link">
+                        <span class="material-symbols-rounded"> info </span>
+                        <span class="text">About</span>
+                    </a>
+                    <a href="#collections" class="menu-link">
+                        <span class="material-symbols-rounded"> category </span>
+                        <span class="text">Collections</span>
+                    </a>
+                    <a href="#topics" class="menu-link">
+                        <span class="material-symbols-rounded"> featured_play_list </span>
+                        <span class="text">Topics</span>
+                    </a>
+                </ul>
+            </div>
 
             <main>
                 <section class="home-section" id="home">
@@ -150,7 +156,11 @@
 
                 <section class="about-section" id="about">
                     <div class="about-blog">
-                        <img class="about-blog-image" src="/images/pic/homepage/about.png" alt="about" />
+                        <img
+                            class="about-blog-image"
+                            src="/images/pic/homepage/about.png"
+                            alt="about"
+                        />
                         <div class="about-content">
                             <p class="about-title">Tớ là Nhà!</p>
                             <p class="about-description">
@@ -159,7 +169,9 @@
                                 tất cả chúng mình đều sẽ được nhắc nhớ về chút bình yên thuở bé,
                                 giữa hành trình làm người lớn lắm thứ ngổn ngang này.
                             </p>
-                            <div class="homepage-button">Xem thêm</div>
+                            <div class="homepage-button">
+                                <a href="/about-me.html">Xem thêm</a>
+                            </div>
                         </div>
                     </div>
 
@@ -288,6 +300,8 @@
                 </div>
             </footer>
         </div>
+
+        <span class="device-screen-dimension" id="device-screen-dimension">Loading...</span>
 
         <!-- Scripts -->
         <script src="js/index.js" defer></script>
