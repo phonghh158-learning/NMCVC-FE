@@ -353,6 +353,20 @@ body.dark .home-banner::after {
     align-items: center;
 }
 
+.collection-card .collection-card-button {
+    display: flex;
+    width: max-content;
+    height: max-content;
+    padding: 8px;
+    border-radius: 999px;
+    background-color: var(--color-primary);
+    justify-content: center;
+    align-items: center;
+    transition: all 0.33s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
 /* Media Query */
 /* Tablet, Small Desktop */
 @media (min-width: 768px) and (max-width: 1399.98px) {
