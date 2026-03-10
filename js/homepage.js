@@ -34,3 +34,21 @@ homepageMenuLinks.forEach((link) => {
 document.getElementById("go-to-about-button").addEventListener("click", () => {
     setHomepageLinkActive(homepageMenuLinks[1]);
 });
+
+const collCards = document.querySelectorAll(".collection-card");
+const btnP = document.getElementById("prev-card");
+const btnN = document.getElementById("next-card");
+let curIdx = 0;
+
+if (collCards.length > 0) collCards[0].classList.add("active");
+
+function moveSlide(n) {
+    collCards[curIdx].classList.remove("active");
+    curIdx = (curIdx + n + collCards.length) % collCards.length;
+    collCards[curIdx].classList.add("active");
+}
+
+if (btnP && btnN) {
+    btnP.onclick = () => moveSlide(-1);
+    btnN.onclick = () => moveSlide(1);
+}
