@@ -551,6 +551,119 @@ body.dark .home-banner::after {
     transition: all 0.33s ease;
 }
 
+/* Gallery */
+.gallery-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+    gap: 32px;
+    background-color: var(--color-surface);
+    border-radius: 16px;
+    border: 1px solid rgb(from var(--color-text) r g b / 0.5);
+    align-items: center;
+}
+
+.gallery-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 540px;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item {
+    position: absolute;
+    width: 280px;
+    height: 420px;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.66s cubic-bezier(0.44, 0, 0.22, 1);
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.11);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Các trạng thái vị trí */
+.gallery-item.active {
+    transform: scale(1.1) zIndex(103);
+    filter: blur(0);
+    opacity: 1;
+    z-index: 103;
+}
+
+.gallery-item.prev-1 {
+    transform: translateX(-216px) scale(0.88);
+    filter: blur(2px);
+    opacity: 0.75;
+    z-index: 102;
+}
+
+.gallery-item.next-1 {
+    transform: translateX(216px) scale(0.88);
+    filter: blur(2px);
+    opacity: 0.75;
+    z-index: 102;
+}
+
+.gallery-item.prev-2 {
+    transform: translateX(-400px) scale(0.75);
+    filter: blur(4px);
+    opacity: 0.5;
+    z-index: 101;
+}
+
+.gallery-item.next-2 {
+    transform: translateX(400px) scale(0.75);
+    z-index: 2;
+    filter: blur(4px);
+    opacity: 0.5;
+    z-index: 101;
+}
+
+.gallery-item.hidden {
+    opacity: 0;
+    transform: scale(0.66);
+}
+
+/* Điều hướng */
+.gallery-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-btn {
+    background: var(--color-surface-container-highest);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--color-on-surface);
+    transition: all 0.33s ease;
+}
+
+.nav-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
 /* Media Query */
 /* Tablet, Small Desktop */
 @media (min-width: 768px) and (max-width: 1399.98px) {

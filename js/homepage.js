@@ -73,3 +73,78 @@ if (btnPrevTopic && btnNextTopic) {
     btnPrevTopic.onclick = () => moveTopicSlide(-1);
     btnNextTopic.onclick = () => moveTopicSlide(1);
 }
+
+// Slideer cho Gallery
+const items = document.querySelectorAll(".gallery-item");
+let currentIndex = 0;
+
+function updateSlider() {
+    items.forEach((item, i) => {
+        item.classList.remove("active", "prev-1", "next-1", "prev-2", "next-2", "hidden");
+
+        let n = items.length;
+        // Tính toán khoảng cách tương đối trong vòng lặp tròn
+        let diff = (i - currentIndex + n) % n;
+
+        if (diff === 0) {
+            item.classList.add("active");
+        } else if (diff === 1 || diff === -(n - 1)) {
+            item.classList.add("next-1");
+        } else if (diff === n - 1 || diff === -1) {
+            item.classList.add("prev-1");
+        } else if (diff === 2 || diff === -(n - 2)) {
+            item.classList.add("next-2");
+        } else if (diff === n - 2 || diff === -2) {
+            item.classList.add("prev-2");
+        } else {
+            item.classList.add("hidden");
+        }
+    });
+}
+
+document.getElementById("next-gal").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateSlider();
+});
+
+document.getElementById("prev-gal").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateSlider();
+});
+
+// Cấu hình thời gian tự chuyển (6000ms = 6 giây)
+const AUTO_SWAP_TIME = 6000;
+let autoSwapTimer;
+
+// Hàm khởi động lại bộ đếm thời gian
+function startAutoSwap() {
+    // Xóa bộ đếm cũ nếu đang chạy
+    stopAutoSwap();
+    // Tạo bộ đếm mới
+    autoSwapTimer = setInterval(() => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateSlider();
+    }, AUTO_SWAP_TIME);
+}
+
+// Hàm dừng bộ đếm (dùng khi cần thiết)
+function stopAutoSwap() {
+    clearInterval(autoSwapTimer);
+}
+
+// Xử lý sự kiện nút Next
+document.getElementById("next-gal").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateSlider();
+    startAutoSwap();
+});
+
+// Xử lý sự kiện nút Prev
+document.getElementById("prev-gal").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateSlider();
+    startAutoSwap();
+});
+
+updateSlider();
+startAutoSwap();
