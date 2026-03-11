@@ -793,7 +793,8 @@ body.dark .theme-toggle .toggle-circle #toggle-circle-light {
     align-items: center;
     align-self: center;
     scroll-behavior: smooth;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: var(--color-primary) transparent;
     transition: all 0.33s ease;

@@ -52,3 +52,24 @@ if (btnP && btnN) {
     btnP.onclick = () => moveSlide(-1);
     btnN.onclick = () => moveSlide(1);
 }
+
+// Slider cho Featured Topics
+const topicCards = document.querySelectorAll(".topic-card");
+const btnPrevTopic = document.getElementById("prev-topic");
+const btnNextTopic = document.getElementById("next-topic");
+let currentTopicIdx = 0;
+
+if (topicCards.length > 0) {
+    topicCards[0].classList.add("active");
+}
+
+function moveTopicSlide(step) {
+    topicCards[currentTopicIdx].classList.remove("active");
+    currentTopicIdx = (currentTopicIdx + step + topicCards.length) % topicCards.length;
+    topicCards[currentTopicIdx].classList.add("active");
+}
+
+if (btnPrevTopic && btnNextTopic) {
+    btnPrevTopic.onclick = () => moveTopicSlide(-1);
+    btnNextTopic.onclick = () => moveTopicSlide(1);
+}

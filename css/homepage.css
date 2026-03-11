@@ -107,7 +107,7 @@ section {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: max-content;
     padding: 36px 0;
     transition: all 0.33s ease;
     z-index: 100;
@@ -135,8 +135,9 @@ section {
     flex-direction: row;
     width: max-content;
     height: max-content;
-    padding: 10px 26px;
-    border-radius: 999px;
+    margin: 2px 0;
+    padding: 10px 20px;
+    border-radius: 4px;
     border-color: transparent;
     background-color: var(--color-primary);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
@@ -146,6 +147,7 @@ section {
     transition: all 0.33s ease;
     cursor: pointer;
     z-index: 103;
+    font-size: 20px;
 }
 
 .homepage-button:hover {
@@ -228,6 +230,13 @@ body.dark .home-banner::after {
     text-shadow: 0 2px 4px rgb(from var(--color-text-inverse) r g b / 0.66);
     transition: all 0.33s ease;
     cursor: default;
+}
+
+.home-section .homepage-button {
+    margin: 0;
+    padding: 12px 24px;
+    font-size: 24px;
+    border-radius: 999px;
 }
 
 /* About */
@@ -335,9 +344,6 @@ body.dark .home-banner::after {
 .about-blog .homepage-button {
     margin: 2px 0;
     padding: 10px 20px;
-    border-radius: 4px;
-    background-color: var(--color-primary);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
     font-size: 18px;
 }
 
@@ -452,13 +458,97 @@ body.dark .home-banner::after {
     cursor: pointer;
 }
 
-.collections-section .homepage-button {
-    margin: 2px 0;
-    padding: 10px 20px;
-    border-radius: 4px;
-    background-color: var(--color-primary);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
+/* Featured Topics */
+.topics-section {
+    gap: 32px;
+    align-items: center;
+}
+
+/* --- Làm đẹp phần Topic Cards --- */
+.topics-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.topic-cards {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+    justify-content: center;
+    transition: all 0.33s ease;
+}
+
+.topic-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: var(--color-surface); /* */
+    border: 1px solid var(--color-secondary); /* */
+    gap: 12px;
+    transition: all 0.33s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.topic-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-primary); /* */
+    box-shadow: 0 8px 24px rgb(from var(--color-text) r g b / 0.1); /* */
+}
+
+.topic-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.topic-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.topic-card:hover .topic-image img {
+    transform: scale(1.1);
+}
+
+.topic-title {
+    font-family: var(--font-title); /* */
     font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text); /* */
+}
+
+.topic-summary {
+    font-family: var(--font-text);
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    text-align: justify;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.topic-slider-controls {
+    position: absolute;
+    top: 144px;
+    display: none;
+    width: 100%;
+    height: max-content;
+    margin-top: 8px;
+    justify-content: space-between;
+    transition: all 0.33s ease;
 }
 
 /* Media Query */
@@ -508,6 +598,19 @@ body.dark .home-banner::after {
     .collection-slider-controls {
         display: flex;
     }
+
+    .topic-cards .topic-card {
+        display: none;
+        width: 100%;
+        max-width: 460px;
+        animation: fadeIn 0.4s ease;
+    }
+    .topic-cards .topic-card.active {
+        display: flex;
+    }
+    .topic-slider-controls {
+        display: flex;
+    }
 }
 
 /* Phone */
@@ -550,6 +653,18 @@ body.dark .home-banner::after {
         display: flex;
     }
     .collection-slider-controls {
+        display: flex;
+    }
+
+    .topic-cards .topic-card {
+        display: none;
+        width: 100%;
+        animation: fadeIn 0.4s ease;
+    }
+    .topic-cards .topic-card.active {
+        display: flex;
+    }
+    .topic-slider-controls {
         display: flex;
     }
 }
