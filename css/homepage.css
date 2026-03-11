@@ -31,7 +31,9 @@
 
 .homepage-nav {
     position: fixed;
+    left: 50%;
     bottom: -72px;
+    transform: translateX(-50%);
     display: flex;
     width: max-content;
     height: max-content;
@@ -667,6 +669,7 @@ body.dark .home-banner::after {
 /* Media Query */
 /* Tablet, Small Desktop */
 @media (min-width: 768px) and (max-width: 1399.98px) {
+    /* About */
     .about-section {
         gap: 0;
     }
@@ -674,6 +677,53 @@ body.dark .home-banner::after {
         width: 0px;
     }
 
+    .about-section .about-blog {
+        width: 100%;
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .about-blog .about-content {
+        width: 66%;
+        height: max-content;
+        gap: 12px;
+    }
+
+    .about-content .about-title {
+        position: relative;
+        width: 100%;
+        height: max-content;
+        font-family: var(--font-title);
+        font-size: 32px;
+        font-weight: 500;
+        color: var(--color-text);
+        transition: all 0.33s ease;
+    }
+
+    .about-content .about-description {
+        position: relative;
+        width: 100%;
+        height: max-content;
+        font-family: var(--font-text);
+        font-size: 18px;
+        font-weight: 400;
+        text-align: justify;
+        color: var(--color-text);
+        transition: all 0.33s ease;
+    }
+
+    .about-blog .about-blog-image {
+        width: 33%;
+        height: 100%;
+    }
+
+    .about-blog .homepage-button {
+        margin: 2px 0;
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    /* Homepage Navigation */
     .homepage-nav .menu a:not(.active) {
         gap: 0;
         padding: 12px 20px;
@@ -699,6 +749,7 @@ body.dark .home-banner::after {
         color: var(--color-primary);
     }
 
+    /* Collection */
     .collection-cards .collection-card {
         display: none;
         width: 100%;
@@ -712,6 +763,7 @@ body.dark .home-banner::after {
         display: flex;
     }
 
+    /* Topic */
     .topic-cards .topic-card {
         display: none;
         width: 100%;
@@ -728,6 +780,61 @@ body.dark .home-banner::after {
 
 /* Phone */
 @media (max-width: 767.98px) {
+    /* About */
+    .about-section {
+        gap: 0;
+    }
+    .about-section .about-me {
+        width: 0px;
+    }
+
+    .about-section .about-blog {
+        width: 100%;
+        padding: 32px;
+        gap: 0;
+    }
+
+    .about-blog .about-content {
+        width: 100%;
+        height: max-content;
+        gap: 12px;
+    }
+
+    .about-content .about-title {
+        position: relative;
+        width: 100%;
+        height: max-content;
+        font-family: var(--font-title);
+        font-size: 32px;
+        font-weight: 500;
+        color: var(--color-text);
+        transition: all 0.33s ease;
+    }
+
+    .about-content .about-description {
+        position: relative;
+        width: 100%;
+        height: max-content;
+        font-family: var(--font-text);
+        font-size: 18px;
+        font-weight: 400;
+        text-align: justify;
+        color: var(--color-text);
+        transition: all 0.33s ease;
+    }
+
+    .about-blog .about-blog-image {
+        width: 0;
+        height: 0;
+    }
+
+    .about-blog .homepage-button {
+        margin: 2px 0;
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    /* Homepage Navigation */
     .homepage-nav .menu {
         gap: 4px;
     }
@@ -757,6 +864,7 @@ body.dark .home-banner::after {
         color: var(--color-primary);
     }
 
+    /* Collection */
     .collection-cards .collection-card {
         display: none;
         width: 100%;
@@ -769,6 +877,7 @@ body.dark .home-banner::after {
         display: flex;
     }
 
+    /* Topic */
     .topic-cards .topic-card {
         display: none;
         width: 100%;
