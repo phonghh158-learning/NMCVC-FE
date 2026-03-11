@@ -1,0 +1,246 @@
+p {
+    cursor: default;
+}
+/* Layout & Container */
+.auth-wrapper {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-background);
+    overflow: hidden;
+}
+
+.auth-card {
+    position: relative;
+    width: 1000px;
+    max-width: 90%;
+    height: 600px;
+    background-color: var(--color-surface);
+    border-radius: 24px;
+    box-shadow: 0 16px 48px rgb(from var(--color-text) r g b / 0.11);
+    overflow: hidden;
+    display: flex;
+}
+
+/* Form Styles */
+.auth-form-container {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 48px;
+    transition: all 0.66s cubic-bezier(0.66, -0.11, 0.25, 1.11);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+    align-items: center;
+}
+
+.auth-title {
+    font-family: var(--font-title);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.auth-subtitle {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 999px;
+    border: none;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-text);
+    font-size: 14px;
+    outline: none;
+    transition: all 0.33s ease;
+}
+
+.input-group input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.form-actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    transition: color 0.33s ease;
+}
+
+.forgot-password:hover {
+    color: var(--color-primary);
+}
+
+.auth-button {
+    width: 100%;
+    padding: 16px;
+    border-radius: 999px;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-family: var(--font-text);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.33s ease;
+    box-shadow: 0 4px 16px rgb(from var(--color-primary) r g b / 0.33);
+    margin-bottom: 24px;
+    margin-top: 8px;
+}
+
+.auth-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgb(from var(--color-primary) r g b / 0.66);
+}
+
+.switch-mode {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.switch-mode a {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Image Styles */
+.auth-image {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    transition: all 0.66s cubic-bezier(0.66, -0.11, 0.25, 1.11);
+}
+
+.auth-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animation States */
+.login-image {
+    left: 0;
+    opacity: 1;
+}
+.login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.login-form {
+    right: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.signup-form {
+    left: -50%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.signup-image {
+    right: -50%;
+    opacity: 0;
+}
+.signup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Trigger Sign Up Mode */
+.auth-card.sign-up-mode .login-image {
+    left: -50%;
+    opacity: 0;
+}
+
+.auth-card.sign-up-mode .login-form {
+    right: -50%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.auth-card.sign-up-mode .signup-form {
+    left: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.auth-card.sign-up-mode .signup-image {
+    right: 0;
+    opacity: 1;
+}
+
+/* Media Query */
+@media (max-width: 767.98px) {
+    .auth-card {
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .auth-form-container,
+    .auth-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .auth-image {
+        display: none;
+    }
+
+    .signup-form {
+        left: 0;
+        top: -100%;
+    }
+
+    .auth-card.sign-up-mode .login-form {
+        right: 0;
+        top: 100%;
+    }
+
+    .auth-card.sign-up-mode .signup-form {
+        top: 0;
+    }
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/authentication.css" />
+        <title>Authentication</title>
+    </head>
+    <body>
+        <div class="auth-wrapper">
+            <div class="auth-card" id="auth-card">
+                <div class="auth-image login-image">
+                    <img src="../images/pic/authentication/login.png" alt="Boy waving" />
+                </div>
+                <div class="auth-form-container login-form">
+                    <form action="#" class="auth-form">
+                        <h2 class="auth-title">Log in</h2>
+                        <p class="auth-subtitle">
+                            Hello, friend! I'm Bách Chi - Home's owner. <br />
+                            Welcome to my home!
+                        </p>
+
+                        <div class="input-group">
+                            <input type="text" placeholder="Username" required />
+                        </div>
+                        <div class="input-group">
+                            <input type="password" placeholder="Password" required />
+                        </div>
+
+                        <div class="form-actions">
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="auth-button">Let's start!</button>
+
+                        <p class="switch-mode">
+                            Don't have an account? <a href="#" id="go-to-signup">Sign up</a>
+                        </p>
+                    </form>
+                </div>
+
+                <div class="auth-form-container signup-form">
+                    <form action="#" class="auth-form">
+                        <h2 class="auth-title">Sign up</h2>
+                        <p class="auth-subtitle">Create your account and come to Nhà!</p>
+
+                        <div class="input-group">
+                            <input type="text" placeholder="Your name" required />
+                        </div>
+                        <div class="input-group">
+                            <input type="email" placeholder="Email" required />
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Username" required />
+                        </div>
+                        <div class="input-group">
+                            <input type="password" placeholder="Password" required />
+                        </div>
+                        <div class="input-group">
+                            <input type="password" placeholder="Re-password" required />
+                        </div>
+
+                        <button type="submit" class="auth-button">Let's start!</button>
+
+                        <p class="switch-mode">
+                            Already have an account? <a href="#" id="go-to-login">Log in</a>
+                        </p>
+                    </form>
+                </div>
+                <div class="auth-image signup-image">
+                    <img src="../images/pic/authentication/signup.png" alt="Welcome" />
+                </div>
+            </div>
+        </div>
+
+        <span class="device-screen-dimension" id="device-screen-dimension">Loading...</span>
+
+        <script src="../js/authentication.js" defer></script>
+        <script src="../js/index.js" defer></script>
+    </body>
+</html>
