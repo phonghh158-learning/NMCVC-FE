@@ -1,32 +1,5 @@
-:root {
-    /* Palette Light */
-    --color-background: #f9f5f6; /* Nền chính - hồng rất nhạt */
-    --color-surface: #f8e8ee; /* Card / navbar */
-    --color-secondary: #fdcedf; /* Viền / hover nhẹ */
-    --color-primary: #f2bed1; /* Nút / điểm nhấn */
-
-    /* Text */
-    --color-text: #3a2e33; /* Chữ chính - tím nâu đậm */
-    --color-text-inverse: #ffffff; /* Chữ trên nền primary */
-    --color-text-secondary: #7c6a72; /* Chữ phụ */
-
-    /* Status */
-    --color-success: #10b981; /* Thành công */
-    --color-error: #e11d48; /* Lỗi */
-    --color-warning: #f59e0b; /* Cảnh báo */
-    --color-info: #3b82f6; /* Thông tin */
-
-    /* Font */
-    --font-text: "Google Sans Flex", sans-serif;
-    --font-title: "Niramit", sans-serif;
-    --font-code: "Google Sans Code", monospace;
-    --font-special: "Cherry Bomb One", system-ui;
-
-    /* Material Symbols */
-    --icon-fill: 0;
-    --icon-wght: 300;
-    --icon-grad: 0;
-    --icon-opsz: 24;
+main {
+    gap: 0;
 }
 
 .homepage-nav {
@@ -94,13 +67,13 @@
 .homepage-nav .menu a.active .text {
     font-size: 20px;
     font-weight: 500;
-    color: var(--color-primary);
+    color: var(--color-text-inverse);
 }
 .homepage-nav .menu a.active .material-symbols-rounded {
     font-size: 26px;
     --icon-opsz: 26;
     --icon-wght: 400;
-    color: var(--color-primary);
+    color: var(--color-text-inverse);
 }
 
 /* Homepage's Sections */
@@ -142,6 +115,7 @@ section {
     border-radius: 4px;
     border-color: transparent;
     background-color: var(--color-primary);
+    color: var(--color-text-inverse);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
     font-size: 24px;
     align-items: center;
@@ -154,6 +128,7 @@ section {
 
 .homepage-button:hover {
     background-color: rgb(from var(--color-text-inverse) r g b / 0.66);
+    color: var(--color-primary);
     border: 1px solid var(--color-primary);
     transform: translateY(-4px);
 }

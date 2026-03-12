@@ -1,0 +1,121 @@
+:root {
+    /* Palette Light */
+    --color-background: #fffcf6;
+    --color-surface: #fdf2e0;
+    --color-secondary: #ffa2a2;
+    --color-primary: #fc8080;
+
+    /* Text */
+    --color-text: #3a2e3e;
+    --color-text-inverse: #fdfdfd;
+    --color-text-secondary: #7c6a72;
+
+    /* Status */
+    --color-success: #10b981; /* Thành công */
+    --color-error: #e11d48; /* Lỗi */
+    --color-warning: #f59e0b; /* Cảnh báo */
+    --color-info: #3b82f6; /* Thông tin */
+
+    /* Font */
+    --font-text: "Google Sans Flex", sans-serif;
+    --font-title: "Niramit", sans-serif;
+    --font-code: "Google Sans Code", monospace;
+    --font-special: "Cherry Bomb One", system-ui;
+
+    /* Material Symbols */
+    --icon-fill: 0;
+    --icon-wght: 300;
+    --icon-grad: 0;
+    --icon-opsz: 24;
+
+    --rainbow-red: #ffb3b3;
+    --rainbow-orange: #ffd1a9;
+    --rainbow-yellow: #fff2b3;
+    --rainbow-green: #c8f2c2;
+    --rainbow-blue: #bbdcff;
+    --rainbow-indigo: #cfc8ff;
+    --rainbow-violet: #e6c6ff;
+}
+
+/* Topics Header */
+.topics-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 84px;
+    width: 100%;
+    height: 156px;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-surface);
+    box-shadow: 0 16px 48px rgb(from var(--color-text) r g b / 0.11);
+    overflow: hidden;
+    z-index: 800;
+}
+
+.topics-header-background {
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.33s ease;
+    z-index: 801;
+}
+
+.topics-header-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(from var(--color-text-inverse) r g b / 0.33);
+}
+
+.topics-header-background img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.33s ease;
+}
+
+.header-title {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    font-family: var(--font-title);
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color-text);
+    text-shadow: 0 2px 4px rgb(from var(--color-text-inverse) r g b / 0.66);
+    transition: all 0.33s ease;
+    cursor: default;
+    z-index: 802;
+}
+
+.header-subtitle {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    font-family: var(--font-text);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    transition: all 0.33s ease;
+    cursor: default;
+    z-index: 802;
+}
+
+/* Topics List */
+.topic-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    overflow: hidden;
+}

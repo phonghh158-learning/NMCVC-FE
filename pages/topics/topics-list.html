@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="../../images/favicon/favicon.ico" />
+        <link rel="stylesheet" href="../../css/styles.css" />
+        <link rel="stylesheet" href="../../css/topics/topic-list.css" />
+        <title>Topics</title>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="collapsed" id="side-bar">
+            <ul class="logo">
+                <a href="/index.html" class="logo-link">
+                    <img class="image" src="../../images/logo/nmcvc.png" alt="logo" />
+                    <span class="text">Nhà</span>
+                </a>
+            </ul>
+
+            <ul class="menu">
+                <a href="/index.html" class="menu-link">
+                    <span class="material-symbols-rounded"> home </span>
+                    <span class="text">Home</span>
+                </a>
+                <a href="/pages/collections/collection-list.html" class="menu-link">
+                    <span class="material-symbols-rounded"> newsstand </span>
+                    <span class="text">Collections</span>
+                </a>
+                <a href="/pages/topics/topics-list.html" class="menu-link">
+                    <span class="material-symbols-rounded"> news </span>
+                    <span class="text">Topics</span>
+                </a>
+                <a href="#" class="menu-link">
+                    <span class="material-symbols-rounded"> search </span>
+                    <span class="text">Explore</span>
+                </a>
+                <a href="#" class="menu-link">
+                    <span class="material-symbols-rounded"> notifications </span>
+                    <span class="text">Notifications</span>
+                </a>
+            </ul>
+
+            <ul class="login">
+                <a href="/pages/authentication.html" class="login-link" id="login-button">
+                    <span class="material-symbols-rounded"> assignment_ind </span>
+                    <span class="text">Login/Register &ThinSpace;</span>
+                </a>
+            </ul>
+
+            <ul class="personal">
+                <div class="dropdown-content" id="personal-content">
+                    <a href="#" class="personal-link" id="personal-page-button">
+                        <span class="material-symbols-rounded"> person </span>
+                        <span class="text">Personal Page</span>
+                    </a>
+                    <a href="#" class="personal-link" id="logout-button">
+                        <span class="material-symbols-rounded"> logout </span>
+                        <span class="text">Logout</span>
+                    </a>
+                </div>
+                <div class="dropdown-button" id="personal-button">
+                    <img src="/../../images/user/m.jpg" alt="personal-avatar" />
+                    <span class="text">@Username</span>
+                </div>
+            </ul>
+
+            <div class="expand-nav-button" id="expand-nav-button">
+                <span class="material-symbols-rounded"> right_panel_close </span>
+            </div>
+            <div class="collapse-nav-button" id="collapse-nav-button">
+                <span class="material-symbols-rounded"> arrow_menu_close </span>
+            </div>
+        </nav>
+
+        <!-- Website Settings -->
+        <div class="website-settings" id="website-settings">
+            <div class="setting theme" id="theme">
+                <div class="setting-icon" id="theme-icon">
+                    <span class="material-symbols-rounded" id="icon-dark"> moon_stars </span>
+                    <span class="material-symbols-rounded" id="icon-light"> light_mode </span>
+                </div>
+                <div class="theme-toggle" id="theme-toggle">
+                    <div class="toggle-background">
+                        <img
+                            src="/../../images/pic/toggle-bg-dark.jpg"
+                            alt=""
+                            id="toggle-bg-dark"
+                        />
+                        <img
+                            src="/../../images/pic/toggle-bg-light.jpg"
+                            alt=""
+                            id="toggle-bg-light"
+                        />
+                    </div>
+                    <div class="toggle-circle" id="theme-toggle-circle">
+                        <span class="material-symbols-rounded" id="toggle-circle-dark">
+                            dark_mode
+                        </span>
+                        <span class="material-symbols-rounded" id="toggle-circle-light">
+                            light_mode
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="setting language" id="language">
+                <div class="setting-icon">
+                    <span class="material-symbols-rounded"> language </span>
+                </div>
+                <div class="language-list" id="language-list">
+                    <div class="toggle-circle" id="language-toggle-circle"></div>
+                    <span class="language-option" id="english">En</span>
+                    <span class="language-option active" id="vietnamese">Vi</span>
+                    <span class="language-option" id="korean">Ko</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <header>
+                <span class="website-name">Nhà, mây, cá và cây</span>
+                <span class="website-page-name" id="website-page-name">Topics</span>
+            </header>
+
+            <!-- Content website này ở trong main -->
+            <main>
+                <div class="topics-header">
+                    <div class="topics-header-background" id="topics-header-background">
+                        <img
+                            src="/images/pic/topics/topics-header-background.jpg"
+                            class="topics-header-background"
+                            id="topics-header-background"
+                            alt=""
+                        />
+                    </div>
+                    <span class="header-title" id="header-title">Topics</span>
+                    <span class="header-subtitle" id="header-subtitle">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                    </span>
+                </div>
+
+                <div class="topics-container">
+                    <div class="topic-filters">
+                        <div class="filter-by-collections">
+                            <span class="filter-title">Filter by Collections</span>
+                            <div class="filter-content" id="filter-content">
+                                <span class="collection-name" id="collection-1">
+                                    Collection 1
+                                </span>
+                                <span class="collection-name" id="collection-2">
+                                    Collection 2
+                                </span>
+                                <span class="collection-name" id="collection-3">
+                                    Collection 3
+                                </span>
+                                <span class="collection-name" id="collection-4">
+                                    Collection 4
+                                </span>
+                                <span class="collection-name" id="collection-5">
+                                    Collection 5
+                                </span>
+                                <span class="collection-name" id="collection-6">
+                                    Collection 6
+                                </span>
+                                <span class="collection-name" id="collection-7">
+                                    Collection 7
+                                </span>
+
+                                <div class="filter-clear">
+                                    <span class="material-symbols-rounded"> ink_eraser </span>
+                                    <span>Clear all</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic-list">
+                        <a class="topic-card active" id="topic-1">
+                            <div class="topic-image">
+                                <img src="/images/pic/homepage/topics/topic-1.png" alt="" />
+                            </div>
+                            <div class="topic-meta">
+                                <span class="topic-collection">Trốn nắng hẹn trăng</span>
+                                <span class="topic-date">12 Th03, 2026</span>
+                            </div>
+                            <span class="topic-title">Bài viết số 1</span>
+                            <span class="topic-summary">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex
+                                sapien vitae pellentesque sem placerat in id. Placerat in id
+                                cursus mi pretium tellus duis. Pretium tellus duis convallis
+                                tempus leo eu aenean.
+                            </span>
+                        </a>
+
+                        <a class="topic-card" id="topic-2">
+                            <div class="topic-image">
+                                <img src="/images/pic/homepage/topics/topic-1.png" alt="" />
+                            </div>
+                            <div class="topic-meta">
+                                <span class="topic-collection">Thẩn thẩn thơ thơ</span>
+                                <span class="topic-date">10 Th03, 2026</span>
+                            </div>
+                            <span class="topic-title">Bài viết số 2</span>
+                            <span class="topic-summary">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex
+                                sapien vitae pellentesque sem placerat in id. Placerat in id
+                                cursus mi pretium tellus duis. Pretium tellus duis convallis
+                                tempus leo eu aenean.
+                            </span>
+                        </a>
+
+                        <a class="topic-card" id="topic-3">
+                            <div class="topic-image">
+                                <img src="/images/pic/homepage/topics/topic-1.png" alt="" />
+                            </div>
+                            <div class="topic-meta">
+                                <span class="topic-collection">Hyun đã ở đây</span>
+                                <span class="topic-date">08 Th03, 2026</span>
+                            </div>
+                            <span class="topic-title">Bài viết số 3</span>
+                            <span class="topic-summary">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex
+                                sapien vitae pellentesque sem placerat in id. Placerat in id
+                                cursus mi pretium tellus duis. Pretium tellus duis convallis
+                                tempus leo eu aenean.
+                            </span>
+                        </a>
+
+                        <a class="topic-card" id="topic-4">
+                            <div class="topic-image">
+                                <img src="/images/pic/homepage/topics/topic-1.png" alt="" />
+                            </div>
+                            <div class="topic-meta">
+                                <span class="topic-collection">Người kể chuyện nhà</span>
+                                <span class="topic-date">05 Th03, 2026</span>
+                            </div>
+                            <span class="topic-title">Bài viết số 4</span>
+                            <span class="topic-summary">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex
+                                sapien vitae pellentesque sem placerat in id. Placerat in id
+                                cursus mi pretium tellus duis. Pretium tellus duis convallis
+                                tempus leo eu aenean.
+                            </span>
+                        </a>
+
+                        <a class="topic-card" id="topic-5">
+                            <div class="topic-image">
+                                <img src="/images/pic/homepage/topics/topic-1.png" alt="" />
+                            </div>
+                            <div class="topic-meta">
+                                <span class="topic-collection">Chuyện để dành</span>
+                                <span class="topic-date">01 Th03, 2026</span>
+                            </div>
+                            <span class="topic-title">Bài viết số 5</span>
+                            <span class="topic-summary">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex
+                                sapien vitae pellentesque sem placerat in id. Placerat in id
+                                cursus mi pretium tellus duis. Pretium tellus duis convallis
+                                tempus leo eu aenean.
+                            </span>
+                        </a>
+
+                        <a class="topic-card" id="topic-6">
+                            <div class="topic-image">
+                                <img src="/images/pic/homepage/topics/topic-1.png" alt="" />
+                            </div>
+                            <div class="topic-meta">
+                                <span class="topic-collection">Nằm nghe Hyun nói</span>
+                                <span class="topic-date">28 Th02, 2026</span>
+                            </div>
+                            <span class="topic-title">Bài viết số 6</span>
+                            <span class="topic-summary">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex
+                                sapien vitae pellentesque sem placerat in id. Placerat in id
+                                cursus mi pretium tellus duis. Pretium tellus duis convallis
+                                tempus leo eu aenean.
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="page-button" id=""></div>
+                </div>
+            </main>
+
+            <footer>
+                <p class="copyright">
+                    ©2026 Nhà, mây, cá và cây. All rights reserved.
+                    <br />
+                    Blog được chăm chút bởi
+                    <a href="../../pages/about-me.html" class="owner-name" id="owner-name"
+                        >Bách Chi</a
+                    >
+                    với tất cả tình yêu.
+                    <br />
+                    Website được phát triển bởi
+                    <a href="#" class="dev-name" id="dev-name">phonghh158</a>.
+                </p>
+                <div class="owner-social-link">
+                    <a
+                        href="https://www.facebook.com/nhacohyun"
+                        class="social-link"
+                        id="owner-facebook"
+                    >
+                        <img src="/../../images/pic/social/facebook.png" alt="" />
+                    </a>
+                    <a href="#" class="social-link" id="owner-instagram">
+                        <img src="/../../images/pic/social/instagram.png" alt="" />
+                    </a>
+                    <a href="#" class="social-link" id="owner-spotify">
+                        <img src="/../../images/pic/social/spotify.png" alt="" />
+                    </a>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Nhớ xóa khi deploy -->
+        <span class="device-screen-dimension" id="device-screen-dimension">Loading...</span>
+
+        <!-- Scripts -->
+        <script src="/js/index.js" defer></script>
+    </body>
+</html>

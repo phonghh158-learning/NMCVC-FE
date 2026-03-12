@@ -1,3 +1,7 @@
+p {
+    cursor: default;
+}
+
 /* Layout chính của trang 404 */
 .not-found-wrapper {
     display: flex;

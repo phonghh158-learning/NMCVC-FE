@@ -1,11 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/homepage.css" />
+        <title>Topic List</title>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="collapsed authenticated" id="side-bar">
+            <ul class="logo">
+                <a href="#" class="logo-link">
+                    <img class="image" src="images/logo/nmcvc.png" alt="logo" />
+                    <span class="text">Nhà</span>
+                </a>
+            </ul>
+
+            <ul class="menu">
+                <a href="#" class="menu-link">
+                    <span class="material-symbols-rounded"> home </span>
+                    <span class="text">Home</span>
+                </a>
+                <a href="#" class="menu-link">
+                    <span class="material-symbols-rounded"> newsstand </span>
+                    <span class="text">Collections</span>
+                </a>
+                <a href="#" class="menu-link">
+                    <span class="material-symbols-rounded"> news </span>
+                    <span class="text">Topics</span>
+                </a>
+                <a href="#" class="menu-link">
+                    <span class="material-symbols-rounded"> search </span>
+                    <span class="text">Explore</span>
+                </a>
+                <a href="#" class="menu-link">
+                    <span class="material-symbols-rounded"> notifications </span>
+                    <span class="text">Notifications</span>
+                </a>
+            </ul>
+
+            <ul class="login">
+                <a href="/pages/authentication.html" class="login-link" id="login-button">
+                    <span class="material-symbols-rounded"> assignment_ind </span>
+                    <span class="text">Login/Register &ThinSpace;</span>
+                </a>
+            </ul>
+
+            <ul class="personal">
+                <div class="dropdown-content" id="personal-content">
+                    <a href="#" class="personal-link" id="personal-page-button">
+                        <span class="material-symbols-rounded"> person </span>
+                        <span class="text">Personal Page</span>
+                    </a>
+                    <a href="#" class="personal-link" id="logout-button">
+                        <span class="material-symbols-rounded"> logout </span>
+                        <span class="text">Logout</span>
+                    </a>
+                </div>
+                <div class="dropdown-button" id="personal-button">
+                    <img src="/images/user/m.jpg" alt="personal-avatar" />
+                    <span class="text">@Username</span>
+                </div>
+            </ul>
+
+            <div class="expand-nav-button" id="expand-nav-button">
+                <span class="material-symbols-rounded"> right_panel_close </span>
+            </div>
+            <div class="collapse-nav-button" id="collapse-nav-button">
+                <span class="material-symbols-rounded"> arrow_menu_close </span>
+            </div>
+        </nav>
+
+        <!-- Website Settings -->
+        <div class="website-settings" id="website-settings">
+            <div class="setting theme" id="theme">
+                <div class="setting-icon" id="theme-icon">
+                    <span class="material-symbols-rounded" id="icon-dark"> moon_stars </span>
+                    <span class="material-symbols-rounded" id="icon-light"> light_mode </span>
+                </div>
+                <div class="theme-toggle" id="theme-toggle">
+                    <div class="toggle-background">
+                        <img src="/images/pic/toggle-bg-dark.jpg" alt="" id="toggle-bg-dark" />
+                        <img
+                            src="/images/pic/toggle-bg-light.jpg"
+                            alt=""
+                            id="toggle-bg-light"
+                        />
+                    </div>
+                    <div class="toggle-circle" id="theme-toggle-circle">
+                        <span class="material-symbols-rounded" id="toggle-circle-dark">
+                            dark_mode
+                        </span>
+                        <span class="material-symbols-rounded" id="toggle-circle-light">
+                            light_mode
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="setting language" id="language">
+                <div class="setting-icon">
+                    <span class="material-symbols-rounded"> language </span>
+                </div>
+                <div class="language-list" id="language-list">
+                    <div class="toggle-circle" id="language-toggle-circle"></div>
+                    <span class="language-option" id="english">En</span>
+                    <span class="language-option active" id="vietnamese">Vi</span>
+                    <span class="language-option" id="korean">Ko</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <header>
+                <span class="website-name">Nhà, mây, cá và cây</span>
+                <span class="website-page-name" id="website-page-name">Trang chủ</span>
+            </header>
+
+            <!-- Content website này ở trong main -->
+            <main></main>
+
+            <footer>
+                <p class="copyright">
+                    ©2026 Nhà, mây, cá và cây. All rights reserved.
+                    <br />
+                    Blog được chăm chút bởi
+                    <a href="#" class="owner-name">Bách Chi</a> với tất cả tình yêu.
+                    <br />
+                    Website được phát triển bởi <a href="#" class="dev-name">phonghh158</a>.
+                </p>
+                <div class="owner-social-link">
+                    <a
+                        href="https://www.facebook.com/nhacohyun"
+                        class="social-link"
+                        id="owner-facebook"
+                    >
+                        <img src="/images/pic/social/facebook.png" alt="" />
+                    </a>
+                    <a href="#" class="social-link" id="owner-instagram">
+                        <img src="/images/pic/social/instagram.png" alt="" />
+                    </a>
+                    <a href="#" class="social-link" id="owner-spotify">
+                        <img src="/images/pic/social/spotify.png" alt="" />
+                    </a>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Nhớ xóa khi deploy -->
+        <span class="device-screen-dimension" id="device-screen-dimension">Loading...</span>
+
+        <!-- Scripts -->
+        <script src="js/index.js" defer></script>
+    </body>
 </html>

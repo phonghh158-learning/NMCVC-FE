@@ -3,15 +3,15 @@
 
 :root {
     /* Palette Light */
-    --color-background: #f9f5f6; /* Nền chính - hồng rất nhạt */
-    --color-surface: #f8e8ee; /* Card / navbar */
-    --color-secondary: #fdcedf; /* Viền / hover nhẹ */
-    --color-primary: #f2bed1; /* Nút / điểm nhấn */
+    --color-background: #fffcf6;
+    --color-surface: #fdf2e0;
+    --color-secondary: #ffa2a2;
+    --color-primary: #fc8080;
 
     /* Text */
-    --color-text: #3a2e33; /* Chữ chính - tím nâu đậm */
-    --color-text-inverse: #ffffff; /* Chữ trên nền primary */
-    --color-text-secondary: #7c6a72; /* Chữ phụ */
+    --color-text: #3a2e3e;
+    --color-text-inverse: #fdfdfd;
+    --color-text-secondary: #7c6a72;
 
     /* Status */
     --color-success: #10b981; /* Thành công */
@@ -30,6 +30,14 @@
     --icon-wght: 300;
     --icon-grad: 0;
     --icon-opsz: 24;
+
+    --rainbow-red: #ffb3b3;
+    --rainbow-orange: #ffd1a9;
+    --rainbow-yellow: #fff2b3;
+    --rainbow-green: #c8f2c2;
+    --rainbow-blue: #bbdcff;
+    --rainbow-indigo: #cfc8ff;
+    --rainbow-violet: #e6c6ff;
 }
 
 html {
@@ -822,6 +830,7 @@ body.dark .theme-toggle .toggle-circle #toggle-circle-light {
     background-color: var(--color-primary);
 }
 
+/* Main */
 main {
     position: relative;
     display: flex;
@@ -829,7 +838,8 @@ main {
     flex-shrink: 0;
     width: 100%;
     height: max-content;
-    min-height: calc(100% - 72px - 120px);
+    min-height: calc(100% - 72px - 144px);
+    gap: 48px;
     scroll-behavior: smooth;
     overflow: hidden;
 }
