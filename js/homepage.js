@@ -35,6 +35,32 @@ document.getElementById("go-to-about-button").addEventListener("click", () => {
     setHomepageLinkActive(homepageMenuLinks[1]);
 });
 
+// Tính năng Scroll Spy (Cập nhật menu khi cuộn trang)
+const wrapper = document.querySelector(".wrapper");
+const sections = document.querySelectorAll("main section");
+
+wrapper.addEventListener("scroll", () => {
+    let currentSectionId = "";
+
+    sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 3 && rect.bottom >= window.innerHeight / 3) {
+            currentSectionId = section.getAttribute("id");
+        }
+    });
+
+    if (currentSectionId) {
+        const activeLink = document.querySelector(
+            `.homepage-nav .menu a[href="#${currentSectionId}"]`,
+        );
+
+        const currentActive = document.querySelector(".homepage-nav .menu a.active");
+        if (activeLink && activeLink !== currentActive) {
+            setHomepageLinkActive(activeLink);
+        }
+    }
+});
+
 const collCards = document.querySelectorAll(".collection-card");
 const btnP = document.getElementById("prev-card");
 const btnN = document.getElementById("next-card");
