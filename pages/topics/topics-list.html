@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/x-icon" href="../../images/favicon/favicon.ico" />
         <link rel="stylesheet" href="../../css/styles.css" />
-        <link rel="stylesheet" href="../../css/topics/topic-list.css" />
+        <link rel="stylesheet" href="../../css/topics/topics-list.css" />
         <title>Topics</title>
     </head>
     <body>
@@ -130,7 +130,7 @@
                             src="/images/pic/topics/topics-header-background.jpg"
                             class="topics-header-background"
                             id="topics-header-background"
-                            alt=""
+                            alt="topics-header-background"
                         />
                     </div>
                     <span class="header-title" id="header-title">Topics</span>
@@ -141,35 +141,25 @@
 
                 <div class="topics-container">
                     <div class="topic-filters">
-                        <div class="filter-by-collections">
-                            <span class="filter-title">Filter by Collections</span>
-                            <div class="filter-content" id="filter-content">
-                                <span class="collection-name" id="collection-1">
-                                    Collection 1
-                                </span>
-                                <span class="collection-name" id="collection-2">
-                                    Collection 2
-                                </span>
-                                <span class="collection-name" id="collection-3">
-                                    Collection 3
-                                </span>
-                                <span class="collection-name" id="collection-4">
-                                    Collection 4
-                                </span>
-                                <span class="collection-name" id="collection-5">
-                                    Collection 5
-                                </span>
-                                <span class="collection-name" id="collection-6">
-                                    Collection 6
-                                </span>
-                                <span class="collection-name" id="collection-7">
-                                    Collection 7
-                                </span>
+                        <span class="filter-title">Filter by Collections</span>
+                        <div class="filter-content" id="filter-collection">
+                            <span class="collection-option" data-id="1">
+                                Trốn nắng hẹn trăng
+                            </span>
+                            <span class="collection-option" data-id="2">Thẩn thẩn thơ thơ</span>
+                            <span class="collection-option" data-id="3">Hyun đã ở đây</span>
+                            <span class="collection-option" data-id="4">
+                                Người kể chuyện nhà
+                            </span>
+                            <span class="collection-option" data-id="5">
+                                Để em khóc lần nữa
+                            </span>
+                            <span class="collection-option" data-id="6">Chuyện để dành</span>
+                            <span class="collection-option" data-id="7">Nằm nghe Hyun nói</span>
 
-                                <div class="filter-clear">
-                                    <span class="material-symbols-rounded"> ink_eraser </span>
-                                    <span>Clear all</span>
-                                </div>
+                            <div class="filter-clear" id="filter-clear">
+                                <span class="material-symbols-rounded">ink_eraser</span>
+                                <span>Clear all</span>
                             </div>
                         </div>
                     </div>
@@ -191,6 +181,26 @@
                                 cursus mi pretium tellus duis. Pretium tellus duis convallis
                                 tempus leo eu aenean.
                             </span>
+                            <div class="topic-rating">
+                                <div class="topic-rating-star">
+                                    <div class="rating-star outlined">
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </div>
+                                    <div class="rating-star filled">
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </div>
+                                </div>
+
+                                <span class="topic-rating-value">4.6</span>
+                            </div>
                         </a>
 
                         <a class="topic-card" id="topic-2">
@@ -209,6 +219,25 @@
                                 cursus mi pretium tellus duis. Pretium tellus duis convallis
                                 tempus leo eu aenean.
                             </span>
+                            <div class="topic-rating">
+                                <div class="topic-rating-star">
+                                    <div class="rating-star outlined">
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </div>
+                                    <div class="rating-star filled">
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </div>
+                                </div>
+                                <span class="topic-rating-value">4.4</span>
+                            </div>
                         </a>
 
                         <a class="topic-card" id="topic-3">
@@ -227,6 +256,25 @@
                                 cursus mi pretium tellus duis. Pretium tellus duis convallis
                                 tempus leo eu aenean.
                             </span>
+                            <div class="topic-rating">
+                                <div class="topic-rating-star">
+                                    <div class="rating-star outlined">
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </div>
+                                    <div class="rating-star filled">
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </div>
+                                </div>
+                                <span class="topic-rating-value">3.6</span>
+                            </div>
                         </a>
 
                         <a class="topic-card" id="topic-4">
@@ -245,6 +293,25 @@
                                 cursus mi pretium tellus duis. Pretium tellus duis convallis
                                 tempus leo eu aenean.
                             </span>
+                            <div class="topic-rating">
+                                <div class="topic-rating-star">
+                                    <div class="rating-star outlined">
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </div>
+                                    <div class="rating-star filled">
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </div>
+                                </div>
+                                <span class="topic-rating-value">3.0</span>
+                            </div>
                         </a>
 
                         <a class="topic-card" id="topic-5">
@@ -263,6 +330,25 @@
                                 cursus mi pretium tellus duis. Pretium tellus duis convallis
                                 tempus leo eu aenean.
                             </span>
+                            <div class="topic-rating">
+                                <div class="topic-rating-star">
+                                    <div class="rating-star outlined">
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </div>
+                                    <div class="rating-star filled">
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </div>
+                                </div>
+                                <span class="topic-rating-value">2.5</span>
+                            </div>
                         </a>
 
                         <a class="topic-card" id="topic-6">
@@ -281,10 +367,49 @@
                                 cursus mi pretium tellus duis. Pretium tellus duis convallis
                                 tempus leo eu aenean.
                             </span>
+                            <div class="topic-rating">
+                                <div class="topic-rating-star">
+                                    <div class="rating-star outlined">
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </div>
+                                    <div class="rating-star filled">
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </div>
+                                </div>
+                                <span class="topic-rating-value">1.9</span>
+                            </div>
                         </a>
                     </div>
 
-                    <div class="page-button" id=""></div>
+                    <div class="pagination" id="pagination">
+                        <button class="page-btn prev" id="prev-page">
+                            <span class="material-symbols-rounded"> chevron_left </span>
+                        </button>
+
+                        <div class="page-input-container">
+                            <input
+                                type="number"
+                                class="current-page-input"
+                                id="current-page-input"
+                                value="1"
+                                min="1"
+                            />
+                            <span class="page-separator">/</span>
+                            <span class="total-pages" id="total-pages">10</span>
+                        </div>
+
+                        <button class="page-btn next" id="next-page">
+                            <span class="material-symbols-rounded"> chevron_right </span>
+                        </button>
+                    </div>
                 </div>
             </main>
 
@@ -324,5 +449,6 @@
 
         <!-- Scripts -->
         <script src="/js/index.js" defer></script>
+        <script src="/js/topics/topics-list.js" defer></script>
     </body>
 </html>
