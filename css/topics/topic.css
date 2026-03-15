@@ -1,0 +1,224 @@
+:root {
+    /* Palette Light */
+    --color-background: #fffcf6;
+    --color-surface: #fdf2e0;
+    --color-secondary: #ffa2a2;
+    --color-primary: #fc8080;
+
+    /* Text */
+    --color-text: #3a2e3e;
+    --color-text-inverse: #fdfdfd;
+    --color-text-secondary: #7c6a72;
+
+    /* Status */
+    --color-success: #10b981; /* Thành công */
+    --color-error: #e11d48; /* Lỗi */
+    --color-warning: #f59e0b; /* Cảnh báo */
+    --color-info: #3b82f6; /* Thông tin */
+
+    /* Font */
+    --font-text: "Google Sans Flex", sans-serif;
+    --font-title: "Niramit", sans-serif;
+    --font-code: "Google Sans Code", monospace;
+    --font-special: "Cherry Bomb One", system-ui;
+
+    /* Material Symbols */
+    --icon-fill: 0;
+    --icon-wght: 300;
+    --icon-grad: 0;
+    --icon-opsz: 24;
+
+    --rainbow-red: #ffb3b3;
+    --rainbow-orange: #ffd1a9;
+    --rainbow-yellow: #fff2b3;
+    --rainbow-green: #c8f2c2;
+    --rainbow-blue: #bbdcff;
+    --rainbow-indigo: #cfc8ff;
+    --rainbow-violet: #e6c6ff;
+}
+
+/* Rating Style */
+.topic-rating {
+    display: flex;
+    width: max-content;
+    height: max-content;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    cursor: default;
+}
+
+.topic-rating-star {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: max-content;
+    color: var(--color-text-secondary);
+}
+.topic-rating-star .rating-star.outlined .material-symbols-rounded {
+    font-size: 24px;
+    --icon-opsz: 24;
+    transition: all 0.33s ease;
+}
+.topic-rating-star .rating-star.filled {
+    position: absolute;
+}
+.topic-rating-star .rating-star.filled .material-symbols-rounded {
+    font-size: 24px;
+    --icon-opsz: 24;
+    --icon-fill: 1;
+    color: #ffbb33;
+    transition: all 0.33s ease;
+}
+
+.topic-rating-value {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-text-secondary);
+}
+
+/* Topic thumbnail */
+.topic-thumbnail {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    margin-top: 96px;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+.topic-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    padding-bottom: 20px;
+    gap: 16px;
+    border-bottom: 1px solid var(--color-primary);
+    overflow: hidden;
+    cursor: default;
+    z-index: 800;
+}
+
+.topic-header .topic-collection {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    font-family: var(--font-text);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.66px;
+    color: var(--color-primary);
+    transition: all 0.33s ease;
+    cursor: default;
+    z-index: 802;
+}
+
+.topic-header .topic-title {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    font-family: var(--font-title);
+    font-size: 36px;
+    font-weight: 600;
+    text-align: justify;
+    color: var(--color-text);
+    transition: all 0.33s ease;
+    cursor: default;
+    z-index: 802;
+}
+
+.topic-header .topic-meta {
+    position: relative;
+    display: flex;
+    width: max-content;
+    height: max-content;
+    font-family: var(--font-text);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    transition: all 0.33s ease;
+    cursor: default;
+    z-index: 802;
+}
+
+.topic-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    gap: 16px;
+    overflow: hidden;
+    cursor: default;
+    z-index: 800;
+}
+
+.topic-content .main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    font-family: var(--font-text);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+    color: var(--color-text);
+    transition: all 0.33s ease;
+    overflow: hidden;
+    cursor: default;
+    z-index: 801;
+}
+
+.topic-content .credit {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    max-width: 100%;
+    height: max-content;
+    padding: 12px 0 0;
+    font-family: var(--font-text);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+    color: var(--color-text);
+    border-top: 1px solid var(--color-secondary);
+    transition: all 0.33s ease;
+    overflow: hidden;
+    cursor: default;
+    z-index: 801;
+}
+
+.topic-footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    cursor: default;
+    z-index: 800;
+}
+
+.topic-social {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+    gap: 16px;
+    align-items: center;
+    overflow: hidden;
+    cursor: default;
+    z-index: 800;
+}

@@ -57,9 +57,7 @@ body {
     color: var(--color-text);
     height: 100vh;
     min-height: 100vh;
-    scroll-behavior: smooth;
     overflow: hidden;
-    transition: all 0.33s ease;
 }
 
 body.dark {
@@ -793,10 +791,10 @@ body.dark .theme-toggle .toggle-circle #toggle-circle-light {
     flex-direction: column;
     /* left: 72px; */
     width: calc(100% - 144px - 72px);
-    min-width: 720px;
-    /* height: 100%; */
-    padding: 0 36px;
-    margin: 0 108px;
+    min-width: 480px;
+    height: 100vh;
+    padding: 0 48px;
+    margin: 0 96px;
     gap: 16px;
     align-items: center;
     align-self: center;
