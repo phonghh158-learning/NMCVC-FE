@@ -119,7 +119,20 @@
             </header>
 
             <!-- Content website này ở trong main -->
-            <main>
+            <main class="7e786bdf83502961b38ff205042af0bc397557fe75e09c2c15753f46f33dddcc">
+                <!-- Class trong thẻ main chỉ được thêm khi người dùng đăng nhập là admin -->
+                <div class="topic-action">
+                    <a
+                        href="/pages/topics/edit-topic.html"
+                        class="topic-action-button"
+                        id="edit-topic"
+                    >
+                        <span class="material-symbols-rounded"> edit </span>
+                    </a>
+                    <a href="#" id="delete-topic" class="topic-action-button">
+                        <span class="material-symbols-rounded"> delete_forever </span>
+                    </a>
+                </div>
                 <img class="topic-thumbnail" src="/images/pic/topics/topic-1.png" alt="" />
 
                 <div class="topic-header">
@@ -127,8 +140,8 @@
                     <span class="topic-title">Bài viết số 1</span>
                     <span class="topic-meta">
                         By &MediumSpace;
-                        <a class="topic-author" href=""> Bách Chi </a> &MediumSpace; on 12 Th03,
-                        2026
+                        <a class="topic-author" href="#"> Bách Chi </a> &MediumSpace; on 12
+                        Th03, 2026
                     </span>
                 </div>
 
@@ -195,36 +208,16 @@
                 </div>
 
                 <div class="topic-footer">
-                    <div class="topic-rating">
-                        <div class="topic-rating-star">
-                            <div class="rating-star outlined">
-                                <span class="material-symbols-rounded"> star </span>
-                                <span class="material-symbols-rounded"> star </span>
-                                <span class="material-symbols-rounded"> star </span>
-                                <span class="material-symbols-rounded"> star </span>
-                                <span class="material-symbols-rounded"> star </span>
-                            </div>
-                            <div class="rating-star filled">
-                                <span class="material-symbols-rounded"> star </span>
-                                <span class="material-symbols-rounded"> star </span>
-                                <span class="material-symbols-rounded"> star </span>
-                                <span class="material-symbols-rounded"> star </span>
-                                <span class="material-symbols-rounded"> star </span>
-                            </div>
-                        </div>
-                        <span class="topic-rating-value">4.4</span>
-                    </div>
+                    <a
+                        href="https://www.facebook.com/nhacohyun/posts/pfbid0LAQCCHmF7RavHG96eAsC84n9sLckNPd3p3FDCZe1Jih3oCLs6PHQV2RSAbGRMMXLl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="facebook-link"
+                    >
+                        Facebook Link
+                    </a>
 
-                    <div class="topic-social">
-                        <a
-                            href="https://www.facebook.com/nhacohyun/posts/pfbid0LAQCCHmF7RavHG96eAsC84n9sLckNPd3p3FDCZe1Jih3oCLs6PHQV2RSAbGRMMXLl"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="facebook-link"
-                        >
-                            Facebook Link
-                        </a>
-
+                    <div class="topic-footer-buttons">
                         <div class="like-button">
                             <span class="material-symbols-rounded"> favorite </span>
                         </div>

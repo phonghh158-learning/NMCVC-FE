@@ -68,43 +68,43 @@ document.getElementById("filter-clear").addEventListener("click", () => {
 });
 
 // Rating Star
-const topicList = document.querySelectorAll(".topic-card");
+// const topicList = document.querySelectorAll(".topic-card");
 
-topicList.forEach((topic) => {
-    const ratingValue = topic
-        .querySelector(".topic-rating-value")
-        .textContent.split(".")
-        .map(Number);
-    const ratingStarFilled = topic.querySelectorAll(
-        ".topic-rating-star .rating-star.filled .material-symbols-rounded",
-    );
+// topicList.forEach((topic) => {
+//     const ratingValue = topic
+//         .querySelector(".topic-rating-value")
+//         .textContent.split(".")
+//         .map(Number);
+//     const ratingStarFilled = topic.querySelectorAll(
+//         ".topic-rating-star .rating-star.filled .material-symbols-rounded",
+//     );
 
-    if (ratingValue[0] === 5) return;
+//     if (ratingValue[0] === 5) return;
 
-    for (let i = 4; i > ratingValue[0]; i--) {
-        ratingStarFilled[i].style.fontSize = "0";
-    }
+//     for (let i = 4; i > ratingValue[0]; i--) {
+//         ratingStarFilled[i].style.fontSize = "0";
+//     }
 
-    if (ratingValue[1] === 0) {
-        ratingStarFilled[ratingValue[0]].style.fontSize = "0";
-    } else {
-        let position;
-        if (ratingValue[1] < 5) {
-            position = ratingValue[1] ** 2 - ratingValue[1] + 33;
-            ratingStarFilled[ratingValue[0]].style.background =
-                `linear-gradient(90deg, #ffbb33 ${position}%, rgba(255, 255, 255, 0) ${position}%`;
-        } else if (ratingValue[1] > 5) {
-            position = (ratingValue[1] % 5) ** 2 - (ratingValue[1] % 5) + 55;
-            ratingStarFilled[ratingValue[0]].style.background =
-                `linear-gradient(90deg, #ffbb33 ${position}%, rgba(255, 255, 255, 0) ${position}%`;
-        } else {
-            ratingStarFilled[ratingValue[0]].style.background =
-                `linear-gradient(90deg, #ffbb33 50%, rgba(255, 255, 255, 0) 50%`;
-        }
+//     if (ratingValue[1] === 0) {
+//         ratingStarFilled[ratingValue[0]].style.fontSize = "0";
+//     } else {
+//         let position;
+//         if (ratingValue[1] < 5) {
+//             position = ratingValue[1] ** 2 - ratingValue[1] + 33;
+//             ratingStarFilled[ratingValue[0]].style.background =
+//                 `linear-gradient(90deg, #ffbb33 ${position}%, rgba(255, 255, 255, 0) ${position}%`;
+//         } else if (ratingValue[1] > 5) {
+//             position = (ratingValue[1] % 5) ** 2 - (ratingValue[1] % 5) + 55;
+//             ratingStarFilled[ratingValue[0]].style.background =
+//                 `linear-gradient(90deg, #ffbb33 ${position}%, rgba(255, 255, 255, 0) ${position}%`;
+//         } else {
+//             ratingStarFilled[ratingValue[0]].style.background =
+//                 `linear-gradient(90deg, #ffbb33 50%, rgba(255, 255, 255, 0) 50%`;
+//         }
 
-        ratingStarFilled[ratingValue[0]].style.backgroundClip = "text";
-        ratingStarFilled[ratingValue[0]].style.webkitBackgroundClip = "text";
-        ratingStarFilled[ratingValue[0]].style.color = "transparent";
-        ratingStarFilled[ratingValue[0]].style.webkitTextFillColor = "transparent";
-    }
-});
+//         ratingStarFilled[ratingValue[0]].style.backgroundClip = "text";
+//         ratingStarFilled[ratingValue[0]].style.webkitBackgroundClip = "text";
+//         ratingStarFilled[ratingValue[0]].style.color = "transparent";
+//         ratingStarFilled[ratingValue[0]].style.webkitTextFillColor = "transparent";
+//     }
+// });

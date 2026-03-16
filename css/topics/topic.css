@@ -41,43 +41,36 @@ main {
     gap: 4px;
 }
 
-/* Rating Style */
-.topic-rating {
+.topic-action {
+    position: absolute;
+    right: 0;
     display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+    margin-top: 96px;
+    padding: 8px;
+    gap: 8px;
     align-items: center;
-    gap: 16px;
-    margin-top: auto;
+    z-index: 900;
 }
 
-.topic-rating-star {
+.topic-action .topic-action-button {
     position: relative;
     display: flex;
-    width: 100%;
-    height: max-content;
-    color: var(--color-text-secondary);
-    cursor: default;
-}
-.topic-rating-star .rating-star.outlined .material-symbols-rounded {
-    font-size: 28px;
-    --icon-opsz: 28;
-    transition: all 0.33s ease;
-}
-.topic-rating-star .rating-star.filled {
-    position: absolute;
-}
-.topic-rating-star .rating-star.filled .material-symbols-rounded {
-    font-size: 28px;
-    --icon-opsz: 28;
-    --icon-fill: 1;
-    color: #ffbb33;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--color-secondary);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     transition: all 0.33s ease;
 }
 
-.topic-rating-value {
-    font-weight: 600;
-    font-size: 18px;
-    color: var(--color-text-secondary);
-    cursor: default;
+.topic-action .topic-action-button:hover {
+    background-color: var(--color-primary);
+    --icon-fill: 1;
 }
 
 /* Topic thumbnail */
@@ -91,6 +84,7 @@ main {
     border-radius: 16px;
     object-fit: cover;
     object-position: center;
+    z-index: 800;
 }
 
 .topic-header {
@@ -214,30 +208,31 @@ main {
     border-top: 2px solid var(--color-surface);
 }
 
-.topic-social {
+.topic-footer-buttons {
     position: relative;
     display: flex;
     flex-direction: row;
     width: max-content;
     height: max-content;
-    gap: 12px;
+    gap: 16px;
     align-items: center;
 }
 
 .facebook-link {
     padding: 10px 20px;
     font-family: var(--font-text);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--color-text-inverse);
-    background-color: var(--color-info);
+    background-color: #1877f2;
     border-radius: 24px;
     text-decoration: none;
-    transition: opacity 0.33s ease;
+    transition: all 0.33s ease;
 }
 
 .facebook-link:hover {
-    opacity: 0.8;
+    color: var(--color-text);
+    opacity: 0.66;
 }
 
 .like-button,
@@ -245,8 +240,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.33s ease;
@@ -261,11 +256,22 @@ main {
     --icon-fill: 1;
 }
 
+.like-button.active {
+    background-color: var(--rainbow-red);
+    color: var(--color-text);
+    --icon-fill: 1;
+}
+
 .pin-button:hover {
     background-color: var(--rainbow-yellow);
 }
 
 .pin-button:hover .material-symbols-rounded {
+    color: var(--color-text-inverse);
+    --icon-fill: 1;
+}
+.pin-button.active {
+    background-color: var(--rainbow-yellow);
     color: var(--color-text-inverse);
     --icon-fill: 1;
 }
