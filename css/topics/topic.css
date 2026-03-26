@@ -37,10 +37,6 @@
     --rainbow-violet: #e6c6ff;
 }
 
-main {
-    gap: 4px;
-}
-
 .topic-action {
     position: absolute;
     right: 0;
@@ -73,13 +69,22 @@ main {
     --icon-fill: 1;
 }
 
+.topic-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    margin-top: 96px;
+    gap: 4px;
+    transition: all 0.33s ease;
+}
+
 /* Topic thumbnail */
 .topic-thumbnail {
     position: relative;
     display: flex;
     width: 100%;
     height: 50vh;
-    margin-top: 96px;
     margin-bottom: 48px;
     border-radius: 16px;
     object-fit: cover;
