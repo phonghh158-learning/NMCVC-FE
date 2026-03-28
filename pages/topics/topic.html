@@ -231,322 +231,56 @@
                     </div>
                 </div>
 
-                <div class="comment-container" id="comment-container">
-                    <h3 class="comment-heading">Bình luận</h3>
+                <!-- Comment -->
 
+                <div class="comment-container">
                     <div class="comment-form">
+                        <div class="commenter-avatar">
+                            <img src="/images/user/m.jpg" alt="Commenter Avatar" />
+                        </div>
                         <textarea
-                            id="new-comment-input"
-                            placeholder="Viết bình luận của bạn..."
-                        ></textarea>
-                        <button id="submit-comment-btn">Gửi</button>
-                    </div>
-
-                    <div class="comment-list" id="comment-list">
-                        <div class="comment-wrapper">
-                            <div class="comment-item">
-                                <div class="comment-menu-wrapper">
-                                    <button class="comment-menu-btn" data-target="dropdown-1">
-                                        <span class="material-symbols-rounded">more_vert</span>
-                                    </button>
-                                    <div class="comment-dropdown" id="dropdown-1">
-                                        <button class="dropdown-action">
-                                            <span class="material-symbols-rounded">edit</span>
-                                        </button>
-                                        <button class="dropdown-action">
-                                            <span class="material-symbols-rounded">delete</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="comment-header">
-                                    <div class="comment-time">12 Th03, 2026 - 10:30</div>
-                                    <div class="comment-user">
-                                        <span class="display-name">Người dùng 1</span>
-                                        <span class="username">@user1</span>
-                                    </div>
-                                </div>
-
-                                <div class="comment-body">
-                                    Đây là nội dung bình luận mẫu. Nó hiển thị ở dưới cùng.
-                                </div>
-                                <div class="comment-actions">
-                                    <button class="reply-btn">Reply</button>
-                                </div>
-                            </div>
-
-                            <div class="replies-container">
-                                <div class="reply-item">
-                                    <div class="comment-menu-wrapper">
-                                        <button
-                                            class="comment-menu-btn"
-                                            data-target="dropdown-reply-1"
-                                        >
-                                            <span class="material-symbols-rounded"
-                                                >more_vert</span
-                                            >
-                                        </button>
-                                        <div class="comment-dropdown" id="dropdown-reply-1">
-                                            <button class="dropdown-action">
-                                                <span class="material-symbols-rounded"
-                                                    >edit</span
-                                                >
-                                            </button>
-                                            <button class="dropdown-action">
-                                                <span class="material-symbols-rounded"
-                                                    >delete</span
-                                                >
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="comment-header">
-                                        <div class="comment-time">12 Th03, 2026 - 11:00</div>
-                                        <div class="comment-user">
-                                            <span class="display-name">Khách 1</span>
-                                            <span class="username">@guest1</span>
-                                        </div>
-                                    </div>
-                                    <div class="comment-body">
-                                        Phản hồi số 1 cho bình luận gốc. Tối đa 3 phản hồi ở
-                                        đây.
-                                    </div>
-                                </div>
-
-                                <div class="reply-item">
-                                    <div class="comment-menu-wrapper">
-                                        <button
-                                            class="comment-menu-btn"
-                                            data-target="dropdown-reply-2"
-                                        >
-                                            <span class="material-symbols-rounded"
-                                                >more_vert</span
-                                            >
-                                        </button>
-                                        <div class="comment-dropdown" id="dropdown-reply-2">
-                                            <button class="dropdown-action">
-                                                <span class="material-symbols-rounded"
-                                                    >edit</span
-                                                >
-                                            </button>
-                                            <button class="dropdown-action">
-                                                <span class="material-symbols-rounded"
-                                                    >delete</span
-                                                >
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="comment-header">
-                                        <div class="comment-time">12 Th03, 2026 - 11:05</div>
-                                        <div class="comment-user">
-                                            <span class="display-name">Khách 2</span>
-                                            <span class="username">@guest2</span>
-                                        </div>
-                                    </div>
-                                    <div class="comment-body">
-                                        Phản hồi số 2. Không có nút reply ở đây.
-                                    </div>
-                                </div>
-
-                                <div class="reply-item">
-                                    <div class="comment-menu-wrapper">
-                                        <button
-                                            class="comment-menu-btn"
-                                            data-target="dropdown-reply-3"
-                                        >
-                                            <span class="material-symbols-rounded"
-                                                >more_vert</span
-                                            >
-                                        </button>
-                                        <div class="comment-dropdown" id="dropdown-reply-3">
-                                            <button class="dropdown-action">
-                                                <span class="material-symbols-rounded"
-                                                    >edit</span
-                                                >
-                                            </button>
-                                            <button class="dropdown-action">
-                                                <span class="material-symbols-rounded"
-                                                    >delete</span
-                                                >
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="comment-header">
-                                        <div class="comment-time">12 Th03, 2026 - 11:10</div>
-                                        <div class="comment-user">
-                                            <span class="display-name">Khách 3</span>
-                                            <span class="username">@guest3</span>
-                                        </div>
-                                    </div>
-                                    <div class="comment-body">
-                                        Phản hồi số 3. Bình luận phản hồi sẽ thụt lề vào so với
-                                        bình luận gốc.
-                                    </div>
-                                </div>
-
-                                <div class="pagination">
-                                    <button class="page-btn prev">
-                                        <span class="material-symbols-rounded">
-                                            chevron_left
-                                        </span>
-                                    </button>
-                                    <div class="page-input-container">
-                                        <input
-                                            type="number"
-                                            class="current-page-input"
-                                            value="1"
-                                            min="1"
-                                        />
-                                        <span class="page-separator">/</span>
-                                        <span class="total-pages">5</span>
-                                    </div>
-                                    <button class="page-btn next">
-                                        <span class="material-symbols-rounded">
-                                            chevron_right
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="comment-wrapper">
-                            <div class="comment-item">
-                                <div class="comment-menu-wrapper">
-                                    <button class="comment-menu-btn" data-target="dropdown-2">
-                                        <span class="material-symbols-rounded">more_vert</span>
-                                    </button>
-                                    <div class="comment-dropdown" id="dropdown-2">
-                                        <button class="dropdown-action">
-                                            <span class="material-symbols-rounded">edit</span>
-                                        </button>
-                                        <button class="dropdown-action">
-                                            <span class="material-symbols-rounded">delete</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="comment-header">
-                                    <div class="comment-time">12 Th03, 2026 - 10:35</div>
-                                    <div class="comment-user">
-                                        <span class="display-name">Người dùng 2</span>
-                                        <span class="username">@user2</span>
-                                    </div>
-                                </div>
-                                <div class="comment-body">
-                                    Bình luận gốc thứ 2. Thử nghiệm xen kẽ màu nền lẻ và chẵn.
-                                </div>
-                                <div class="comment-actions">
-                                    <button class="reply-btn">Reply</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="comment-wrapper">
-                            <div class="comment-item">
-                                <div class="comment-menu-wrapper">
-                                    <button class="comment-menu-btn" data-target="dropdown-3">
-                                        <span class="material-symbols-rounded">more_vert</span>
-                                    </button>
-                                    <div class="comment-dropdown" id="dropdown-3">
-                                        <button class="dropdown-action">
-                                            <span class="material-symbols-rounded">edit</span>
-                                        </button>
-                                        <button class="dropdown-action">
-                                            <span class="material-symbols-rounded">delete</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="comment-header">
-                                    <div class="comment-time">12 Th03, 2026 - 10:40</div>
-                                    <div class="comment-user">
-                                        <span class="display-name">Người dùng 3</span>
-                                        <span class="username">@user3</span>
-                                    </div>
-                                </div>
-                                <div class="comment-body">
-                                    Bình luận gốc thứ 3. Giao diện tối đa hiển thị 5 cái.
-                                </div>
-                                <div class="comment-actions">
-                                    <button class="reply-btn">Reply</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="comment-wrapper">
-                            <div class="comment-item">
-                                <div class="comment-menu-wrapper">
-                                    <button class="comment-menu-btn" data-target="dropdown-4">
-                                        <span class="material-symbols-rounded">more_vert</span>
-                                    </button>
-                                    <div class="comment-dropdown" id="dropdown-4">
-                                        <button class="dropdown-action">
-                                            <span class="material-symbols-rounded">edit</span>
-                                        </button>
-                                        <button class="dropdown-action">
-                                            <span class="material-symbols-rounded">delete</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="comment-header">
-                                    <div class="comment-time">12 Th03, 2026 - 10:45</div>
-                                    <div class="comment-user">
-                                        <span class="display-name">Người dùng 4</span>
-                                        <span class="username">@user4</span>
-                                    </div>
-                                </div>
-                                <div class="comment-body">
-                                    Bình luận gốc thứ 4. Nút ba chấm nằm chính xác ở góc với
-                                    border 999px.
-                                </div>
-                                <div class="comment-actions">
-                                    <button class="reply-btn">Reply</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="comment-wrapper">
-                            <div class="comment-item">
-                                <div class="comment-menu-wrapper">
-                                    <button class="comment-menu-btn" data-target="dropdown-5">
-                                        <span class="material-symbols-rounded">more_vert</span>
-                                    </button>
-                                    <div class="comment-dropdown" id="dropdown-5">
-                                        <button class="dropdown-action">
-                                            <span class="material-symbols-rounded">edit</span>
-                                        </button>
-                                        <button class="dropdown-action">
-                                            <span class="material-symbols-rounded">delete</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="comment-header">
-                                    <div class="comment-time">12 Th03, 2026 - 10:50</div>
-                                    <div class="comment-user">
-                                        <span class="display-name">Người dùng 5</span>
-                                        <span class="username">@user5</span>
-                                    </div>
-                                </div>
-                                <div class="comment-body">
-                                    Bình luận gốc thứ 5. Đây là bình luận cuối cùng trong trang
-                                    đầu tiên.
-                                </div>
-                                <div class="comment-actions">
-                                    <button class="reply-btn">Reply</button>
-                                </div>
-                            </div>
+                            class="comment-input"
+                            name="comment"
+                            id="comment"
+                            placeholder="Inut your comment here..."
+                        >
+                        </textarea>
+                        <div class="comment-button" type="submit">
+                            <span class="material-symbols-rounded"> send </span>
                         </div>
                     </div>
 
-                    <div class="pagination" id="parent-pagination">
-                        <button class="page-btn prev">
-                            <span class="material-symbols-rounded"> chevron_left </span>
-                        </button>
-                        <div class="page-input-container">
-                            <input type="number" class="current-page-input" value="1" min="1" />
-                            <span class="page-separator">/</span>
-                            <span class="total-pages">20</span>
+                    <div class="comment-list">
+                        <div class="comment" id="comment-1">
+                            <div class="comment-header">
+                                <div class="commenter-info">
+                                    <div class="commenter-avatar">
+                                        <img src="/images/user/m.jpg" alt="Commenter Avatar" />
+                                    </div>
+                                    <div class="commenter-display-name">
+                                        <span class="commenter-name"></span>
+                                        <span class="commenter-username"></span>
+                                    </div>
+                                </div>
+                                <span class="comment-date">20/07/2023</span>
+                            </div>
+                            <div class="comment-content">
+                                <p>Đây là bình luận 3</p>
+                            </div>
+                            <div class="comment-footer">
+                                <div class="reply-button">Reply</div>
+                                <div class="comment-action">
+                                    <span class="material-symbols-rounded comment-action-edit">
+                                        edit
+                                    </span>
+                                    <span
+                                        class="material-symbols-rounded comment-action-delete"
+                                    >
+                                        delete
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                        <button class="page-btn next">
-                            <span class="material-symbols-rounded"> chevron_right </span>
-                        </button>
                     </div>
                 </div>
             </main>
