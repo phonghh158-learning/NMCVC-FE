@@ -27,14 +27,85 @@
     --icon-wght: 300;
     --icon-grad: 0;
     --icon-opsz: 24;
-
-    --rainbow-red: #ffb3b3;
-    --rainbow-orange: #ffd1a9;
-    --rainbow-yellow: #fff2b3;
-    --rainbow-green: #c8f2c2;
-    --rainbow-blue: #bbdcff;
-    --rainbow-indigo: #cfc8ff;
-    --rainbow-violet: #e6c6ff;
 }
 
+.comment-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid var(--color-secondary);
+    transition: all 0.33s ease;
+}
 
+.comment-form {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    gap: 12px;
+    border: 1px solid var(--color-secondary);
+    transition: all 0.33s ease;
+}
+
+.comment-form .commenter-avatar {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid var(--color-secondary);
+    overflow: hidden;
+    transition: all 0.33s ease;
+}
+
+.comment-input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 72px;
+    padding: 12px;
+    font-family: var(--font-text);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    resize: none;
+    background-color: var(--color-surface);
+    transition: all 0.33s ease;
+}
+
+.comment-submit-btn {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    width: max-content;
+    height: max-content;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.33s ease;
+}
+
+.comment-submit-btn .material-symbols-rounded {
+    --icon-opsz: 28;
+    --icon-wght: 200;
+    font-size: 28px;
+    color: var(--color-text);
+    transition: all 0.33s ease;
+}
+
+.comment-submit-btn:hover .material-symbols-rounded {
+    --icon-fill: 1;
+    color: var(--color-primary);
+}

@@ -6,6 +6,7 @@
         <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
         <link rel="stylesheet" href="/css/styles.css" />
         <link rel="stylesheet" href="/css/topics/topic.css" />
+        <link rel="stylesheet" href="/css/topics/comment.css" />
         <title>Homepage</title>
     </head>
     <body>
@@ -232,12 +233,13 @@
                 </div>
 
                 <!-- Comment -->
-
                 <div class="comment-container">
                     <div class="comment-form">
-                        <div class="commenter-avatar">
-                            <img src="/images/user/m.jpg" alt="Commenter Avatar" />
-                        </div>
+                        <img
+                            src="/images/user/m.jpg"
+                            class="commenter-avatar"
+                            alt="Commenter Avatar"
+                        />
                         <textarea
                             class="comment-input"
                             name="comment"
@@ -245,9 +247,10 @@
                             placeholder="Inut your comment here..."
                         >
                         </textarea>
-                        <div class="comment-button" type="submit">
+
+                        <button type="submit" class="comment-submit-btn">
                             <span class="material-symbols-rounded"> send </span>
-                        </div>
+                        </button>
                     </div>
 
                     <div class="comment-list">
@@ -257,18 +260,17 @@
                                     <div class="commenter-avatar">
                                         <img src="/images/user/m.jpg" alt="Commenter Avatar" />
                                     </div>
-                                    <div class="commenter-display-name">
-                                        <span class="commenter-name"></span>
-                                        <span class="commenter-username"></span>
-                                    </div>
+                                    <a href="#" class="commenter-name"> G.I.Joe </a>
                                 </div>
                                 <span class="comment-date">20/07/2023</span>
+                                <div class="admin-react-button">
+                                    <span class="material-symbols-rounded"> add_reaction </span>
+                                </div>
                             </div>
                             <div class="comment-content">
                                 <p>Đây là bình luận 3</p>
                             </div>
                             <div class="comment-footer">
-                                <div class="reply-button">Reply</div>
                                 <div class="comment-action">
                                     <span class="material-symbols-rounded comment-action-edit">
                                         edit
