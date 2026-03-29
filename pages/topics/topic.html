@@ -120,7 +120,7 @@
             </header>
 
             <!-- Content website này ở trong main -->
-            <main class="7e786bdf83502961b38ff205042af0bc397557fe75e09c2c15753f46f33dddcc">
+            <main>
                 <!-- Class trong thẻ main chỉ được thêm khi người dùng đăng nhập là admin -->
                 <div class="topic-container">
                     <div class="topic-action">
@@ -244,9 +244,8 @@
                             class="comment-input"
                             name="comment"
                             id="comment"
-                            placeholder="Inut your comment here..."
-                        >
-                        </textarea>
+                            placeholder="Input your comment here..."
+                        ></textarea>
 
                         <button type="submit" class="comment-submit-btn">
                             <span class="material-symbols-rounded"> send </span>
@@ -263,25 +262,124 @@
                                     <a href="#" class="commenter-name"> G.I.Joe </a>
                                 </div>
                                 <span class="comment-date">20/07/2023</span>
-                                <div class="admin-react-button">
-                                    <span class="material-symbols-rounded"> add_reaction </span>
+                                <div class="admin-react">
+                                    <span class="material-symbols-rounded admin-react-button">
+                                        add_reaction
+                                    </span>
+
+                                    <div class="admin-reaction-list">
+                                        <div class="admin-reaction">
+                                            <img
+                                                src="/images/pic/comments/admin-reactions/hug.png"
+                                                alt="hug"
+                                            />
+                                            <span class="reaction-name"> Hug </span>
+                                        </div>
+
+                                        <div class="admin-reaction">
+                                            <img
+                                                src="/images/pic/comments/admin-reactions/love.png"
+                                                alt="love"
+                                            />
+                                            <span class="reaction-name"> Love </span>
+                                        </div>
+
+                                        <div class="admin-reaction">
+                                            <img
+                                                src="/images/pic/comments/admin-reactions/chill.png"
+                                                alt="chill"
+                                            />
+                                            <span class="reaction-name"> Chill </span>
+                                        </div>
+
+                                        <div class="admin-reaction">
+                                            <img
+                                                src="/images/pic/comments/admin-reactions/ehehe.png"
+                                                alt="ehehe"
+                                            />
+                                            <span class="reaction-name"> Ê hê hê </span>
+                                        </div>
+
+                                        <div class="admin-reaction">
+                                            <img
+                                                src="/images/pic/comments/admin-reactions/shock.png"
+                                                alt="shock"
+                                            />
+                                            <span class="reaction-name"> Shock </span>
+                                        </div>
+
+                                        <div class="admin-reaction">
+                                            <img
+                                                src="/images/pic/comments/admin-reactions/uncomfortable.png"
+                                                alt="uncomfortable"
+                                            />
+                                            <span class="reaction-name"> Uncomfortable </span>
+                                        </div>
+
+                                        <div class="admin-reaction">
+                                            <img
+                                                src="/images/pic/comments/admin-reactions/angry.png"
+                                                alt="angry"
+                                            />
+                                            <span class="reaction-name"> Angry </span>
+                                        </div>
+
+                                        <div class="admin-reaction">
+                                            <img
+                                                src="/images/pic/comments/admin-reactions/FU.png"
+                                                alt="FU"
+                                            />
+                                            <span class="reaction-name"> fufu </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="comment-content">
-                                <p>Đây là bình luận 3</p>
+                            <div class="comment-body">
+                                <div class="comment-content">
+                                    <p class="comment-text">
+                                        Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                        Quisque faucibus ex sapien vitae pellentesque sem
+                                        placerat. In id cursus mi pretium tellus duis convallis.
+                                        Tempus leo eu aenean sed diam urna tempor. Pulvinar
+                                        vivamus fringilla lacus nec metus bibendum egestas.
+                                        Iaculis massa nisl malesuada lacinia integer nunc
+                                        posuere. Ut hendrerit semper vel class aptent taciti
+                                        sociosqu. Ad litora torquent per conubia nostra inceptos
+                                        himenaeos.
+                                    </p>
+                                    <p class="comment-text">
+                                        Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                        Quisque faucibus ex sapien vitae pellentesque sem
+                                        placerat. In id cursus mi pretium tellus duis convallis.
+                                    </p>
+                                </div>
+
+                                <img
+                                    src="/images/pic/comments/admin-reactions/hug.png"
+                                    alt="hug"
+                                    class="admin-reaction isNull"
+                                />
                             </div>
                             <div class="comment-footer">
-                                <div class="comment-action">
-                                    <span class="material-symbols-rounded comment-action-edit">
-                                        edit
-                                    </span>
-                                    <span
-                                        class="material-symbols-rounded comment-action-delete"
-                                    >
-                                        delete
-                                    </span>
+                                <div class="comment-action" id="comment-edit">
+                                    <span class="material-symbols-rounded"> edit </span>
+                                    <span class="text">Edit</span>
+                                </div>
+
+                                <div class="comment-action" id="comment-delete">
+                                    <span class="material-symbols-rounded"> delete </span>
+                                    <span class="text">Delete</span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-nav">
+                        <div class="nav-btn" id="prev-page">
+                            <span class="material-symbols-rounded">arrow_back</span>
+                        </div>
+                        <div class="nav-btn" id="next-page">
+                            <span class="material-symbols-rounded">arrow_forward</span>
                         </div>
                     </div>
                 </div>
@@ -324,5 +422,6 @@
         <!-- Scripts -->
         <script src="/js/index.js" defer></script>
         <script src="/js/topics/topic.js" defer></script>
+        <script src="/js/topics/comment.js" defer></script>
     </body>
 </html>
