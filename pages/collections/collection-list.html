@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
         <link rel="stylesheet" href="/css/styles.css" />
-        <link rel="stylesheet" href="/css/homepage.css" />
+        <link rel="stylesheet" href="/css/collections/collection-list.css" />
         <title>Homepage</title>
     </head>
     <body>
@@ -27,9 +27,9 @@
                     <span class="material-symbols-rounded"> newsstand </span>
                     <span class="text">Collections</span>
                 </a>
-                <a href="/pages/topics/topics-list.html" class="menu-link">
+                <a href="/pages/collection/collection-list.html" class="menu-link">
                     <span class="material-symbols-rounded"> news </span>
-                    <span class="text">Topics</span>
+                    <span class="text">collection</span>
                 </a>
                 <a href="#" class="menu-link">
                     <span class="material-symbols-rounded"> search </span>
@@ -120,7 +120,44 @@
 
             <!-- Content website này ở trong main -->
             <main>
-                
+                <div class="collection-header">
+                    <div class="collection-header-background" id="collection-header-background">
+                        <img
+                            src="/images/pic/collection/collection-header-background.jpg"
+                            class="collection-header-background"
+                            id="collection-header-background"
+                            alt="collection-header-background"
+                        />
+                    </div>
+                    <span class="header-title" id="header-title">Collection</span>
+                    <span class="header-subtitle" id="header-subtitle">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                    </span>
+                </div>
+
+                <div class="collection-body">
+                    <div class="collection-list">
+                        <span class="material-symbols-rounded arrow" id="arrow">
+                            keyboard_arrow_right
+                        </span>
+                        <div class="collection-item active">Trốn nắng hẹn trăng</div>
+                        <div class="collection-item">Thẩn thẩn thơ thơ</div>
+                        <div class="collection-item">Người kể chuyện nhà</div>
+                        <div class="collection-item">Hyun đã ở đây</div>
+                        <div class="collection-item">Để em khóc lần nữa khi mùa đông đến</div>
+                        <div class="collection-item">Chuyện để dành</div>
+                        <div class="collection-item">Nằm nghe Hyun nói</div>
+                        <a class="add-collection" href="#">
+                            <span class="material-symbols-rounded"> add </span>
+                            <span class="text">New Collection</span>
+                        </a>
+                    </div>
+
+                    <div class="collection-content">
+                        <div class="collection-describe"></div>
+                        <div class="collection-topics"></div>
+                    </div>
+                </div>
             </main>
 
             <footer>
@@ -159,5 +196,6 @@
 
         <!-- Scripts -->
         <script src="/js/index.js" defer></script>
+        <script src="/js/collection/collection-list.js" defer></script>
     </body>
 </html>
