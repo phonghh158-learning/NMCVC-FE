@@ -86,7 +86,13 @@
 .topic-filters {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 36px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .filter-title {
@@ -102,7 +108,8 @@
     align-items: center;
 }
 
-.collection-option {
+.collection-option,
+.status-option {
     padding: 8px 16px;
     background-color: transparent;
     border: 1px solid var(--color-primary);
@@ -112,16 +119,17 @@
     cursor: pointer;
 }
 
-.collection-option.active {
+.collection-option.active,
+.status-option.active {
     color: var(--color-text-inverse);
 }
 
-.collection-option:hover {
+.collection-option:hover,
+.status-option:hover {
     background-color: var(--color-surface);
     border: 1px solid var(--color-text);
 }
 
-/* Clear all ẩn mặc định */
 .filter-clear {
     display: flex;
     flex-direction: row;
@@ -138,28 +146,24 @@
     transition: all 0.33s ease;
     cursor: pointer;
     opacity: 0;
+    pointer-events: none;
 }
 
 .filter-clear:hover {
     background-color: var(--color-surface);
 }
 
-.filter-clear span {
-    transition: all 0.33s ease;
-    cursor: pointer;
+.filter-clear.show {
+    font-family: var(--font-text);
+    font-size: 16px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .filter-clear .material-symbols-rounded {
     font-size: 0;
     --icon-opsz: 0;
-}
-
-.filter-clear.show {
-    width: max-content;
-    height: max-content;
-    font-family: var(--font-text);
-    font-size: 16px;
-    opacity: 1;
+    transition: all 0.33s ease;
 }
 
 .filter-clear.show .material-symbols-rounded {

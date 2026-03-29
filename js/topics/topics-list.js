@@ -8,21 +8,19 @@ let activeColor = new Map([
     ["#e6c6ff", false],
 ]);
 
-// Kiểm tra xem có collection filter nào active hay không?
-function checkActiveCollectionFilter() {
-    const activeCollection = document.querySelector(".collection-option.active");
-    return activeCollection !== null;
-}
-
 const collectionFilters = document.querySelectorAll("#filter-collection .collection-option");
-function activeCollectionFilter(element, activeColor) {
+const statusFilters = document.querySelectorAll("#filter-status .status-option");
+const collectionFilterClear = document.getElementById("filter-clear-collection");
+const statusFilterClear = document.getElementById("filter-clear-status");
+
+function activeFilter(element, activeColor, filterClear, checkActive) {
     element.addEventListener("click", () => {
         element.classList.toggle("active");
 
-        if (checkActiveCollectionFilter()) {
-            document.getElementById("filter-clear").classList.add("show");
+        if (checkActive !== null) {
+            filterClear.classList.add("show");
         } else {
-            document.getElementById("filter-clear").classList.remove("show");
+            filterClear.classList.remove("show");
         }
 
         if (!element.classList.contains("active")) {
@@ -42,15 +40,32 @@ function activeCollectionFilter(element, activeColor) {
                 }
             }
         }
-        console.log(activeColor);
     });
 }
 
+if (document.querySelector(".collection-option.active") !== null) {
+    collectionFilterClear.classList.add("show");
+} else {
+    collectionFilterClear.classList.remove("show");
+}
+
+if (document.querySelector(".status-option.active") !== null) {
+    statusFilterClear.classList.add("show");
+} else {
+    statusFilterClear.classList.remove("show");
+}
+
 collectionFilters.forEach((element) => {
-    activeCollectionFilter(element, activeColor);
+    let checkActive = document.querySelector(".collection-option.active") !== null;
+    activeFilter(element, activeColor, collectionFilterClear, checkActive);
 });
 
-document.getElementById("filter-clear").addEventListener("click", () => {
+statusFilters.forEach((element) => {
+    let checkActive = document.querySelector(".status-option.active") !== null;
+    activeFilter(element, activeColor, statusFilterClear, checkActive);
+});
+
+collectionFilterClear.addEventListener("click", () => {
     const activeCollections = document.querySelectorAll(".collection-option.active");
 
     activeCollections.forEach((element) => {
@@ -64,7 +79,24 @@ document.getElementById("filter-clear").addEventListener("click", () => {
         activeColor.set(color, false);
     }
 
-    document.getElementById("filter-clear").classList.remove("show");
+    collectionFilterClear.classList.remove("show");
+});
+
+statusFilterClear.addEventListener("click", () => {
+    const activeStatuses = document.querySelectorAll(".status-option.active");
+
+    activeStatuses.forEach((element) => {
+        element.classList.remove("active");
+        element.style.backgroundColor = "transparent";
+
+        element.dataset.originalColor = "";
+    });
+
+    for (let [color, value] of activeColor) {
+        activeColor.set(color, false);
+    }
+
+    statusFilterClear.classList.remove("show");
 });
 
 // Rating Star

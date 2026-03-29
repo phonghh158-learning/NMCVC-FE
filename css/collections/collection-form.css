@@ -1,0 +1,142 @@
+.form-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 72px - 144px - 120px);
+    justify-content: center;
+    align-items: center;
+    margin-top: 72px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    padding: 28px 32px;
+    background-color: var(--color-surface);
+    border-radius: 24px;
+    border: 1px solid var(--color-secondary);
+    box-shadow: 0 1px 4px rgb(from var(--color-text) r g b / 0.66);
+    gap: 36px;
+    transition: all 0.33s ease;
+}
+
+.form-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+.form-header .title {
+    font-family: var(--font-title);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.form-header .subtitle {
+    font-family: var(--font-text);
+    font-size: 16px;
+    color: var(--color-text-secondary);
+}
+
+.collection-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-group label {
+    font-family: var(--font-text);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-left: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: var(--color-background);
+    border: 2px solid var(--color-secondary);
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-family: var(--font-text);
+    font-size: 16px;
+    color: var(--color-text);
+    outline: none;
+    transition: all 0.33s ease;
+}
+
+.form-group textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgb(from var(--color-text-secondary) r g b / 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgb(from var(--color-primary) r g b / 0.15);
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: flex-end;
+    margin-top: 12px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 32px;
+    border-radius: 999px;
+    font-family: var(--font-text);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.33s ease;
+}
+
+.btn-cancel {
+    background-color: transparent;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-text-secondary);
+}
+
+.btn-cancel:hover {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border-color: var(--color-text);
+}
+
+.btn-submit {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    color: var(--color-text);
+    box-shadow: 0 2px 8px rgb(from var(--color-text) r g b / 0.33);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgb(from var(--color-text) r g b / 0.33);
+    color: var(--color-text);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}

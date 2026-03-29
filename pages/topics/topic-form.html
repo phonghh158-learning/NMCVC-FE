@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
         <link rel="stylesheet" href="/css/styles.css" />
-        <link rel="stylesheet" href="/css/collections/collection-list.css" />
+        <link rel="stylesheet" href="/css/topics/topic-form.css" />
         <title>Homepage</title>
     </head>
     <body>
@@ -27,9 +27,9 @@
                     <span class="material-symbols-rounded"> newsstand </span>
                     <span class="text">Collections</span>
                 </a>
-                <a href="/pages/collection/collection-list.html" class="menu-link">
+                <a href="/pages/topics/topics-list.html" class="menu-link">
                     <span class="material-symbols-rounded"> news </span>
-                    <span class="text">collection</span>
+                    <span class="text">Topics</span>
                 </a>
                 <a href="#" class="menu-link">
                     <span class="material-symbols-rounded"> search </span>
@@ -120,45 +120,101 @@
 
             <!-- Content website này ở trong main -->
             <main>
-                <div class="collection-header">
-                    <div class="collection-header-background" id="collection-header-background">
-                        <img
-                            src="/images/pic/collection/collection-header-background.jpg"
-                            class="collection-header-background"
-                            id="collection-header-background"
-                            alt="collection-header-background"
+                <!-- Class trong thẻ main chỉ được thêm khi người dùng đăng nhập là admin -->
+                <form class="topic-form">
+                    <label
+                        class="thumbnail-upload-box"
+                        id="thumbnail-upload-box"
+                        for="topic-thumbnail"
+                    >
+                        <input
+                            type="file"
+                            class="topic-thumbnail"
+                            id="topic-thumbnail"
+                            name="topic-thumbnail"
+                            accept="image/png, image/jpg, image/jpeg, image/webp"
+                        />
+
+                        <img id="preview-image" class="preview-image" alt="Thumbnail Preview" />
+
+                        <div class="upload-content">
+                            <span class="material-symbols-rounded">upload</span>
+                            <p class="upload-title">Upload your topic's thumbnail</p>
+                            <p class="upload-note">Max 10MB, PNG, JPG, JPEG, WEBP</p>
+                            <div class="browse-btn">Browse File</div>
+                        </div>
+                    </label>
+
+                    <div class="topic-header">
+                        <select
+                            class="topic-collection"
+                            name="collection"
+                            id="topic-collection"
+                        >
+                            <option value="Trốn nắng hẹn trăng">Trốn nắng hẹn trăng</option>
+                            <option value="Thẩn thẩn thơ thơ">Thẩn thẩn thơ thơ</option>
+                            <option value="Người kể chuyện nhà">Người kể chuyện nhà</option>
+                            <option value="Hyun đã ở đây">Hyun đã ở đây</option>
+                            <option value="Để em khóc lần nữa khi mùa đông đến">
+                                Để em khóc lần nữa khi mùa đông đến
+                            </option>
+                            <option value="Chuyện để dành">Chuyện để dành</option>
+                            <option value="Nằm nghe Hyun nói">Nằm nghe Hyun nói</option>
+                        </select>
+                        <input
+                            class="topic-title"
+                            name="title"
+                            id="topic-title"
+                            type="text"
+                            placeholder="Nhập tiêu đề của bài viết này"
+                        />
+                        <span class="topic-meta">
+                            By &MediumSpace;
+                            <a class="topic-author" href="#"> Bách Chi </a> &MediumSpace; on 12
+                            Th03, 2026
+                        </span>
+                    </div>
+
+                    <div class="topic-content">
+                        <textarea
+                            class="content"
+                            id="content"
+                            name="content"
+                            rows="8"
+                            placeholder="Viết nội dung bài viết ở đây..."
+                        ></textarea>
+                        <input
+                            class="credit"
+                            id="credit"
+                            name="credit"
+                            type="text"
+                            placeholder="Viết lời kết cho bài viết nhé."
                         />
                     </div>
-                    <span class="header-title" id="header-title">Collection</span>
-                    <span class="header-subtitle" id="header-subtitle">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                    </span>
-                </div>
 
-                <div class="collection-body">
-                    <div class="collection-list">
-                        <span class="material-symbols-rounded arrow" id="arrow">
-                            keyboard_arrow_right
-                        </span>
-                        <div class="collection-item active">Trốn nắng hẹn trăng</div>
-                        <div class="collection-item">Thẩn thẩn thơ thơ</div>
-                        <div class="collection-item">Người kể chuyện nhà</div>
-                        <div class="collection-item">Hyun đã ở đây</div>
-                        <div class="collection-item">Để em khóc lần nữa khi mùa đông đến</div>
-                        <div class="collection-item">Chuyện để dành</div>
-                        <div class="collection-item">Nằm nghe Hyun nói</div>
-                        <a class="add-collection" href="#">
-                            <span class="material-symbols-rounded"> add </span>
-                            <span class="text">New Collection</span>
-                        </a>
-                    </div>
+                    <div class="topic-footer">
+                        <input
+                            type="url"
+                            name="facebookLink"
+                            class="facebook-link"
+                            id="facebook-link"
+                            placeholder="Nhập đường dẫn bài viết Facebook..."
+                            autocomplete="off"
+                        />
 
-                    <div class="collection-content">
-                        <div class="collection-describe"></div>
-                        <div class="collection-topics-title">Bài viết nổi bật</div>
-                        <div class="collection-topics"></div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-cancel" id="btn-cancel">
+                                Hủy
+                            </button>
+                            <button type="button" class="btn btn-draft" id="btn-draft">
+                                Lưu nháp
+                            </button>
+                            <button type="submit" class="btn btn-submit" id="btn-submit">
+                                Đăng bài
+                            </button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </main>
 
             <footer>
@@ -166,9 +222,9 @@
                     ©2026 Nhà, mây, cá và cây. All rights reserved.
                     <br />
                     Blog được chăm chút bởi
-                    <a href="/pages/about-me.html" class="owner-name" id="owner-name"
-                        >Bách Chi</a
-                    >
+                    <a href="/pages/about-me.html" class="owner-name" id="owner-name">
+                        Bách Chi
+                    </a>
                     với tất cả tình yêu.
                     <br />
                     Website được phát triển bởi
@@ -197,6 +253,6 @@
 
         <!-- Scripts -->
         <script src="/js/index.js" defer></script>
-        <script src="/js/collection/collection-list.js" defer></script>
+        <script src="/js/topics/topic-form.js"></script>
     </body>
 </html>
