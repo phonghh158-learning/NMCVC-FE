@@ -49,7 +49,7 @@ const collectionData = {
     "Nằm nghe Hyun nói": "Tuyển tập những lời dặn dò hay tâm sự be bé của anh Hyun.",
 };
 
-const describeContainer = document.querySelector(".collection-describe");
+const describeContainer = document.getElementById("collection-describe-text");
 const topicsContainer = document.querySelector(".collection-topics");
 
 function generateTopicCards(collectionName) {
@@ -78,7 +78,7 @@ function renderCollectionContent(item) {
     const collectionName = item.textContent.trim();
     const description = collectionData[collectionName] || "";
 
-    describeContainer.innerHTML = `<p class="collection-describe-text">${description}</p>`;
+    describeContainer.innerText = description;
     topicsContainer.innerHTML = generateTopicCards(collectionName);
 }
 

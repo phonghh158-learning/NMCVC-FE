@@ -133,6 +133,10 @@
     margin-bottom: 0;
 }
 
+p {
+    cursor: default;
+}
+
 /* Media Query cho điện thoại */
 @media (max-width: 767.98px) {
     .about-page-container {

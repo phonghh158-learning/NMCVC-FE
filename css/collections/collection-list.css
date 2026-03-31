@@ -179,10 +179,21 @@
 }
 
 /* --- Collection Content Area --- */
+.collection-describe {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    gap: 16px;
+    transition: all 0.33s ease;
+    z-index: 800;
+}
+
 .collection-describe-text {
     position: relative;
     display: flex;
-    width: 100%;
+    width: calc(100% - 56px);
     height: max-content;
     padding: 16px 0 16px 32px;
     font-family: var(--font-text);
@@ -321,4 +332,36 @@
 
 .add-collection:hover {
     background-color: var(--color-secondary);
+}
+
+/* Collection Action */
+.collection-action {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    gap: 8px;
+    align-items: center;
+    z-index: 900;
+}
+
+.collection-action .collection-action-button {
+    position: relative;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--color-secondary);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.33s ease;
+}
+
+.collection-action .collection-action-button:hover {
+    background-color: var(--color-primary);
+    --icon-fill: 1;
 }
