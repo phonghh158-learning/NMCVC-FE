@@ -71,7 +71,7 @@
     z-index: 802;
 }
 
-/* Container chung */
+/* Container Topic */
 .topics-container {
     display: flex;
     flex-direction: column;
@@ -80,6 +80,61 @@
     height: max-content;
     padding: 36px 0;
     transition: all 0.33s ease;
+}
+
+/* --- Topic Create */
+.create-topic {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    gap: 32px;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.33s ease;
+}
+
+.create-topic .create-topic-title {
+    font-family: var(--font-title);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-text);
+    transition: all 0.33s ease;
+    cursor: default;
+}
+
+.create-topic .create-topic-button {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+    gap: 8px;
+    align-content: center;
+    align-items: center;
+    padding: 6px 32px 6px 24px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-text);
+    border-radius: 999px;
+    transition: all 0.33s ease;
+    cursor: pointer;
+}
+
+.create-topic .create-topic-button .create-topic-button-text {
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.create-topic .create-topic-button .material-symbols-rounded {
+    font-size: 22px;
+    --icon-opsz: 22;
+}
+
+.create-topic .create-topic-button:hover {
+    background-color: transparent;
+    border-color: var(--color-primary);
 }
 
 /* --- Filter Section --- */
@@ -108,24 +163,25 @@
     align-items: center;
 }
 
-.collection-option,
-.status-option {
+.filter-option {
     padding: 8px 16px;
     background-color: transparent;
-    border: 1px solid var(--color-primary);
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
     border-radius: 999px;
     font-size: 16px;
     transition: all 0.5s ease;
     cursor: pointer;
 }
 
-.collection-option.active,
-.status-option.active {
-    color: var(--color-text-inverse);
+.filter-option.active {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgb(from var(--color-text) r g b / 0.33);
 }
 
-.collection-option:hover,
-.status-option:hover {
+.filter-option:hover {
     background-color: var(--color-surface);
     border: 1px solid var(--color-text);
 }

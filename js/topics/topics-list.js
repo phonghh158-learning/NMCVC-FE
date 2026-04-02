@@ -1,103 +1,57 @@
-let activeColor = new Map([
-    ["#ffb3b3", false],
-    ["#ffd1a9", false],
-    ["#fff2b3", false],
-    ["#c8f2c2", false],
-    ["#bbdcff", false],
-    ["#cfc8ff", false],
-    ["#e6c6ff", false],
-]);
-
-const collectionFilters = document.querySelectorAll("#filter-collection .collection-option");
-const statusFilters = document.querySelectorAll("#filter-status .status-option");
+const collectionFilterBox = document.getElementById("filter-collection");
+const statusFilterBox = document.getElementById("filter-status");
 const collectionFilterClear = document.getElementById("filter-clear-collection");
 const statusFilterClear = document.getElementById("filter-clear-status");
 
-function activeFilter(element, activeColor, filterClear, checkActive) {
-    element.addEventListener("click", () => {
-        element.classList.toggle("active");
+function activeFilter(filterBox) {
+    filterBox.querySelectorAll(".filter-option").forEach((filter) => {
+        filter.addEventListener("click", () => {
+            filter.classList.toggle("active");
 
-        if (checkActive !== null) {
-            filterClear.classList.add("show");
-        } else {
-            filterClear.classList.remove("show");
-        }
+            let checkActive = filterBox.querySelector(".filter-option.active");
+            let filterClear = filterBox.querySelector(".filter-clear");
 
-        if (!element.classList.contains("active")) {
-            const currentColor = element.dataset.originalColor;
-
-            activeColor.set(currentColor, false);
-
-            element.style.backgroundColor = "transparent";
-            element.dataset.originalColor = "";
-        } else {
-            for (let [color, value] of activeColor) {
-                if (!value) {
-                    element.style.backgroundColor = color;
-                    element.dataset.originalColor = color;
-                    activeColor.set(color, true);
-                    break;
-                }
+            if (checkActive !== null) {
+                filterClear.classList.add("show");
+            } else {
+                filterClear.classList.remove("show");
             }
+        });
+    });
+}
+
+activeFilter(collectionFilterBox);
+
+statusFilterBox.querySelectorAll(".filter-option").forEach((filter) => {
+    filter.addEventListener("click", () => {
+        let filterActive = statusFilterBox.querySelector(".filter-option.active");
+
+        if (filter.classList.contains("active")) {
+            filter.classList.remove("active");
+            statusFilterClear.classList.remove("show");
+        } else {
+            if (filterActive !== null) {
+                filterActive.classList.remove("active");
+            }
+
+            filter.classList.add("active");
+            statusFilterClear.classList.add("show");
         }
     });
-}
-
-if (document.querySelector(".collection-option.active") !== null) {
-    collectionFilterClear.classList.add("show");
-} else {
-    collectionFilterClear.classList.remove("show");
-}
-
-if (document.querySelector(".status-option.active") !== null) {
-    statusFilterClear.classList.add("show");
-} else {
-    statusFilterClear.classList.remove("show");
-}
-
-collectionFilters.forEach((element) => {
-    let checkActive = document.querySelector(".collection-option.active") !== null;
-    activeFilter(element, activeColor, collectionFilterClear, checkActive);
 });
 
-statusFilters.forEach((element) => {
-    let checkActive = document.querySelector(".status-option.active") !== null;
-    activeFilter(element, activeColor, statusFilterClear, checkActive);
-});
-
-collectionFilterClear.addEventListener("click", () => {
-    const activeCollections = document.querySelectorAll(".collection-option.active");
-
-    activeCollections.forEach((element) => {
-        element.classList.remove("active");
-        element.style.backgroundColor = "transparent";
-
-        element.dataset.originalColor = "";
+function clearAllFilter(filterBox) {
+    let filterClear = filterBox.querySelector(".filter-clear");
+    filterClear.addEventListener("click", () => {
+        filterBox.querySelectorAll(".filter-option").forEach((filter) => {
+            filter.classList.remove("active");
+        });
+        filterClear.classList.remove("show");
     });
+}
 
-    for (let [color, value] of activeColor) {
-        activeColor.set(color, false);
-    }
-
-    collectionFilterClear.classList.remove("show");
-});
-
-statusFilterClear.addEventListener("click", () => {
-    const activeStatuses = document.querySelectorAll(".status-option.active");
-
-    activeStatuses.forEach((element) => {
-        element.classList.remove("active");
-        element.style.backgroundColor = "transparent";
-
-        element.dataset.originalColor = "";
-    });
-
-    for (let [color, value] of activeColor) {
-        activeColor.set(color, false);
-    }
-
-    statusFilterClear.classList.remove("show");
-});
+clearAllFilter(collectionFilterBox);
+clearAllFilter(statusFilterBox);
 
 // Rating Star
 // const topicList = document.querySelectorAll(".topic-card");

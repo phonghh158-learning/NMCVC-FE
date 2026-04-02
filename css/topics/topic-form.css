@@ -139,8 +139,8 @@ main {
 }
 
 .thumbnail-upload-box.has-image {
-    border: none;
-    background: transparent;
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-surface);
 }
 
 .thumbnail-upload-box.has-image .preview-image {
@@ -148,7 +148,7 @@ main {
 }
 
 .thumbnail-upload-box.has-image .upload-content {
-    display: none;
+    opacity: 0.66;
 }
 
 /* Header */
